@@ -271,7 +271,7 @@
 ══════════════════════ */
 .inside-stats {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   gap: 14px;
   margin-top: 52px;
 }
@@ -370,8 +370,9 @@
   margin: 24px 0;
 }
 .digital-li {
-  display: flex; align-items: center; gap: 10px;
+  display: flex; align-items: flex-start; gap: 10px;
   font-size: 14px; color: rgba(236,243,238,0.75);
+  word-break: break-word;
 }
 .digital-li::before {
   content: '→';
@@ -393,10 +394,11 @@
 }
 .digital-callout-big {
   font-family: var(--heading);
-  font-size: 52px; font-weight: 900;
+  font-size: clamp(28px, 6vw, 52px); font-weight: 900;
   color: var(--green); letter-spacing: -0.04em;
-  line-height: 1; margin-bottom: 6px;
+  line-height: 1.05; margin-bottom: 6px;
   display: block;
+  word-break: break-word;
 }
 .digital-callout p { font-size: 15px; color: var(--muted); line-height: 1.65; margin-top: 14px; }
 
@@ -770,6 +772,15 @@
   .inside-list { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   body { padding-bottom: 80px; }
+
+  /* Digital section mobile */
+  .digital-callout { padding: 24px 20px; }
+  .digital-note { padding: 16px 18px; }
+
+  /* Prevent any block from overflowing viewport */
+  .section, .ev-hero, .ev-final, .digital-section {
+    overflow-x: hidden;
+  }
 }
 
 </style>
@@ -1002,10 +1013,6 @@
     <div class="istat card">
       <span class="istat-num">8</span>
       <div class="istat-label">экспертов</div>
-    </div>
-    <div class="istat card">
-      <span class="istat-num">60'</span>
-      <div class="istat-label">Q&A в каждом блоке</div>
     </div>
   </div>
 
