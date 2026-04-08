@@ -138,21 +138,26 @@ body {
   align-items: center;
 }
 
-/* atmospheric bg — light version */
+/* atmospheric bg — photo version */
 .ev-hero-bg {
   position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 70% 50% at 60% 20%, rgba(151,188,83,0.18) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 60% at 20% 80%, rgba(151,188,83,0.10) 0%, transparent 55%),
-    linear-gradient(180deg, #F7F8F5 0%, #EEF2E6 100%);
+  background-image: url('hero-afterparty.png');
+  background-size: cover;
+  background-position: center 30%;
+  background-repeat: no-repeat;
+}
+.ev-hero-bg::after {
+  content: '';
+  position: absolute; inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(10,14,8,0.55) 0%,
+    rgba(10,14,8,0.70) 50%,
+    rgba(10,14,8,0.88) 100%
+  );
 }
 .ev-hero-grid {
-  position: absolute; inset: 0;
-  background-image:
-    linear-gradient(rgba(151,188,83,0.08) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(151,188,83,0.08) 1px, transparent 1px);
-  background-size: 60px 60px;
-  mask-image: linear-gradient(180deg, transparent 0%, black 40%, black 70%, transparent 100%);
+  display: none;
 }
 
 .ev-hero-eyebrow {
@@ -176,6 +181,50 @@ body {
   animation: pulse 2s ease infinite;
 }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
+
+/* Hero text — white on dark photo */
+.ev-hero .ev-hero-eyebrow { position: relative; z-index: 1; }
+.ev-hero .ev-hero-title { color: #FFFFFF; position: relative; z-index: 1; }
+.ev-hero .ev-hero-title-2 { color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
+.ev-hero .ev-hero-meta { position: relative; z-index: 1; }
+.ev-hero .ev-meta-tag {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9);
+  backdrop-filter: blur(8px);
+}
+.ev-hero .ev-meta-tag.accent {
+  background: rgba(151,188,83,0.25);
+  border-color: rgba(151,188,83,0.5);
+  color: #97BC53;
+}
+.ev-hero .ev-hero-sub { color: rgba(255,255,255,0.72); position: relative; z-index: 1; }
+.ev-hero .ev-hero-topics { position: relative; z-index: 1; }
+.ev-hero .ev-topic {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.75);
+  backdrop-filter: blur(8px);
+}
+.ev-hero .ev-hero-btns { position: relative; z-index: 1; }
+.ev-hero .btn-ghost {
+  color: #FFFFFF;
+  border-color: rgba(255,255,255,0.35);
+}
+.ev-hero .btn-ghost:hover { border-color: #97BC53; color: #97BC53; }
+.ev-hero .ev-hero-stats {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  position: relative; z-index: 1;
+}
+.ev-hero .ev-stat { border-color: rgba(255,255,255,0.12); }
+.ev-hero .ev-stat-label { color: rgba(255,255,255,0.5); }
+.ev-hero .ev-live {
+  background: rgba(151,188,83,0.2);
+  border-color: rgba(151,188,83,0.45);
+  backdrop-filter: blur(8px);
+}
 
 .ev-hero-title {
   font-family: 'Inter', sans-serif;
@@ -280,17 +329,28 @@ body {
   align-items: start;
   margin-top: 52px;
 }
-.concept-text p {
-  font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 18px;
+.concept-blockquote {
+  border-left: 3px solid #97BC53;
+  padding: 20px 24px;
+  background: rgba(151,188,83,0.06);
+  border-radius: 0 10px 10px 0;
+  margin-bottom: 0;
 }
+.concept-blockquote p {
+  font-size: 16px;
+  color: rgba(26,30,20,0.7);
+  line-height: 1.8;
+  margin-bottom: 14px !important;
+}
+.concept-blockquote p:last-child { margin-bottom: 0 !important; }
 .concept-lead {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(20px, 2.5vw, 28px);
+  font-size: clamp(18px, 2vw, 22px);
   font-weight: 700;
   color: #1A1E14;
-  line-height: 1.3;
-  letter-spacing: -0.02em;
-  margin-bottom: 24px !important;
+  line-height: 1.35;
+  letter-spacing: -0.015em;
+  margin-bottom: 14px !important;
 }
 .concept-text p strong { color: #1A1E14; font-weight: 600; }
 .concept-scheme {
@@ -1023,16 +1083,10 @@ body {
 
   <div class="concept-grid">
     <div class="concept-text">
-      <p class="concept-lead">Каждый блок — это не монолог со сцены.<br>Это <strong>диалог с залом.</strong></p>
-      <p>Два эксперта с разной экспертизой коротко задают контекст. А дальше — <strong>60 минут живых вопросов и разборов</strong> на основе реальных кейсов участников.</p>
-      <p>Ты уходишь не с чужими слайдами, а с ответами на <strong>свои вопросы</strong>.</p>
-
-      <div class="concept-chips">
-        <div class="concept-chip">вопросы из зала</div>
-        <div class="concept-chip">разбор реальных кейсов</div>
-        <div class="concept-chip">2 эксперта в одной теме</div>
-        <div class="concept-chip">разные взгляды</div>
-        <div class="concept-chip">максимум пользы вместо воды</div>
+      <div class="concept-blockquote">
+        <p class="concept-lead">Каждый блок — это не монолог со сцены.<br>Это <strong>диалог с залом.</strong></p>
+        <p>Два эксперта с разной экспертизой коротко задают контекст. А дальше — <strong>60 минут живых вопросов и разборов</strong> на основе реальных кейсов участников.</p>
+        <p>Ты уходишь не с чужими слайдами, а с ответами на <strong>свои вопросы</strong>.</p>
       </div>
     </div>
 
@@ -1061,7 +1115,7 @@ body {
         </div>
       </div>
       <div class="scheme-arrow">↓</div>
-      <div class="scheme-block card">
+      <div class="scheme-block center">
         <div class="scheme-icon">✅</div>
         <div>
           <h4>Польза, которую можно унести</h4>
