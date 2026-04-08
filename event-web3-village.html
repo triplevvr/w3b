@@ -999,47 +999,61 @@ body {
   /* Hero mobile fixes */
   .ev-hero {
     justify-content: center;
-    padding: calc(var(--nav-h) + 20px) 0 60px;
-    text-align: left;
+    padding: calc(var(--nav-h) + 16px) 0 16px;
+    text-align: center;
+    min-height: 100svh;
   }
   .ev-hero .container {
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
   }
+  .ev-hero-eyebrow { margin-bottom: 12px; }
+  .ev-live { font-size: 10px; padding: 5px 12px; }
   .ev-hero-title {
-    font-size: clamp(36px, 11vw, 56px);
-    line-height: 0.96;
-    margin-bottom: 8px;
+    font-size: clamp(32px, 10vw, 48px);
+    line-height: 0.95;
+    margin-bottom: 6px;
   }
   .ev-hero-title-2 {
-    font-size: clamp(16px, 5vw, 24px);
-    margin-bottom: 24px;
-  }
-  .ev-hero-meta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .ev-meta-tag {
-    font-size: 13px;
-    padding: 8px 14px;
+    font-size: clamp(14px, 4.5vw, 20px);
+    margin-bottom: 16px;
   }
   .ev-hero-sub {
-    font-size: 15px;
-    margin-bottom: 16px;
-    text-align: left;
+    font-size: 14px;
+    margin-bottom: 12px;
+    text-align: center;
+    max-width: 320px;
   }
   .ev-hero-topics {
-    margin-bottom: 28px;
+    margin-bottom: 16px;
+    justify-content: center;
   }
+  .ev-topic { font-size: 11px; padding: 4px 10px; }
   .ev-hero-btns {
     flex-direction: column;
     width: 100%;
+    gap: 8px;
+    margin-bottom: 20px;
   }
   .ev-hero-btns .btn {
     width: 100%;
     justify-content: center;
-    padding: 16px;
+    padding: 15px;
+    font-size: 14px;
+  }
+  /* Move meta below buttons on mobile */
+  .ev-hero-meta {
+    order: 10;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 0;
+    margin-top: 4px;
+  }
+  .ev-meta-tag {
+    font-size: 11px;
+    padding: 6px 10px;
   }
 }
 
@@ -1083,12 +1097,6 @@ body {
   <h1 class="ev-hero-title">WEB3 AI<br>VILLAGE</h1>
   <p class="ev-hero-title-2">БИЗНЕС TALK</p>
 
-  <div class="ev-hero-meta">
-    <div class="ev-meta-tag accent">📅 25 апреля 2026</div>
-    <div class="ev-meta-tag">📍 Комарово Village · 4 км от Минска</div>
-    <div class="ev-meta-tag">⏱ 11:00 — 03:00</div>
-  </div>
-
   <p class="ev-hero-sub">
     Выездное деловое событие, где не читают сухие доклады, а вместе с залом разбирают реальные вопросы, кейсы и возможности новой цифровой экономики.
   </p>
@@ -1104,6 +1112,12 @@ body {
   <div class="ev-hero-btns">
     <a href="#tickets" class="btn btn-primary">Купить билет</a>
     <a href="#topics" class="btn btn-ghost">Смотреть программу</a>
+  </div>
+
+  <div class="ev-hero-meta">
+    <div class="ev-meta-tag accent">📅 25 апреля 2026</div>
+    <div class="ev-meta-tag">📍 Комарово Village · 4 км от Минска</div>
+    <div class="ev-meta-tag">⏱ 11:00 — 03:00</div>
   </div>
 
   <div class="ev-hero-stats">
