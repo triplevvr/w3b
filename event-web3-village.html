@@ -115,8 +115,25 @@ body {
 .faq-body-inner { color: rgba(26,30,20,0.6); }
 
 /* Sticky buy */
-.sticky-buy { background: rgba(247,248,245,0.97); border-top: 1px solid rgba(0,0,0,0.1); }
-.sticky-buy a { background: #97BC53; color: #1A1E14; }
+/* Mobile nav button */
+.nav-pill-mobile { display: none; }
+
+@media (max-width: 768px) {
+  .nav-pill-mobile {
+    display: inline-flex;
+    align-items: center;
+    background: #97BC53;
+    color: #1A1E14 !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 12px !important;
+    font-weight: 800 !important;
+    padding: 9px 16px;
+    border-radius: 8px;
+    text-decoration: none;
+    white-space: nowrap;
+    box-shadow: 0 2px 12px rgba(151,188,83,0.35);
+  }
+}
 
 /* ══════════════════════
    EVENT HERO
@@ -985,7 +1002,7 @@ body {
   .ev-hero-stats { display: none; }
   .inside-list { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
-  body { padding-bottom: 80px; }
+  body { padding-bottom: 0; }
 
   /* Digital section mobile */
   .digital-callout { padding: 24px 20px; }
@@ -1061,11 +1078,6 @@ body {
 </head>
 <body class="ev-page">
 
-<!-- ── MOBILE STICKY ── -->
-<div class="sticky-buy">
-  <a href="#tickets">Купить билет →</a>
-</div>
-
 <!-- ── NAV ── -->
 <nav class="nav">
 <div class="container">
@@ -1077,6 +1089,7 @@ body {
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#tickets" class="nav-pill">Купить билет →</a></li>
   </ul>
+  <a href="#tickets" class="nav-pill nav-pill-mobile">Купить билет</a>
 </div>
 </nav>
 
