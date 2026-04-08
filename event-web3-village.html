@@ -14,7 +14,6 @@
    LIGHT THEME OVERRIDES — EVENT PAGE
 ══════════════════════════════════════ */
 
-/* CSS variable overrides for light theme */
 .ev-page {
   --bg:          #F7F8F5;
   --surface:     #EEEEE9;  
@@ -35,14 +34,12 @@
   --body:        'Inter', sans-serif;
 }
 
-/* Apply to body */
 body {
   background: #F7F8F5;
   color: #1A1E14;
   font-family: 'Inter', sans-serif;
 }
 
-/* Nav light */
 .nav {
   background: rgba(247,248,245,0.92);
   border-bottom: 1px solid rgba(0,0,0,0.08);
@@ -56,10 +53,8 @@ body {
   box-shadow: 0 4px 16px rgba(151,188,83,0.35);
 }
 
-/* Dividers */
 .divider { background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent); }
 
-/* Section backgrounds */
 .section { background: #F7F8F5; }
 .section--dark {
   background: #EEEEE9;
@@ -67,7 +62,6 @@ body {
   border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
-/* Cards */
 .card {
   background: #FFFFFF;
   border: 1px solid rgba(0,0,0,0.08);
@@ -78,12 +72,10 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.08);
 }
 
-/* Labels and titles */
 .s-label { color: #6A8C2A; }
 .s-title { color: #1A1E14; }
 .s-sub { color: rgba(26,30,20,0.55); }
 
-/* Buttons */
 .btn-primary {
   background: #97BC53;
   color: #1A1E14;
@@ -96,7 +88,6 @@ body {
 }
 .btn-ghost:hover { border-color: #97BC53; color: #6A8C2A; }
 
-/* Footer */
 .footer {
   background: #EEEEE9;
   border-top: 1px solid rgba(0,0,0,0.08);
@@ -106,7 +97,6 @@ body {
 .footer-links a:hover { color: #6A8C2A; }
 .footer-copy { color: rgba(26,30,20,0.35); }
 
-/* FAQ */
 .faq-item { background: #FFFFFF; border-color: rgba(0,0,0,0.08); }
 .faq-q { color: #1A1E14; }
 .faq-q:hover { color: #6A8C2A; }
@@ -114,10 +104,7 @@ body {
 .faq-item.open .faq-icon { background: rgba(151,188,83,0.15); }
 .faq-body-inner { color: rgba(26,30,20,0.6); }
 
-/* Sticky buy */
-/* Mobile nav button */
 .nav-pill-mobile { display: none; }
-
 @media (max-width: 768px) {
   .nav-pill-mobile {
     display: inline-flex;
@@ -155,7 +142,6 @@ body {
   align-items: center;
 }
 
-/* atmospheric bg — photo version */
 .ev-hero-bg {
   position: absolute; inset: 0;
   background-image: url('hero-afterparty.png');
@@ -173,9 +159,7 @@ body {
     rgba(10,14,8,0.88) 100%
   );
 }
-.ev-hero-grid {
-  display: none;
-}
+.ev-hero-grid { display: none; }
 
 .ev-hero-eyebrow {
   display: flex; align-items: center; gap: 12px;
@@ -199,7 +183,6 @@ body {
 }
 @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
-/* Hero text — white on dark photo */
 .ev-hero .ev-hero-eyebrow { position: relative; z-index: 1; }
 .ev-hero .ev-hero-title { color: #FFFFFF; position: relative; z-index: 1; }
 .ev-hero .ev-hero-title-2 { color: rgba(255,255,255,0.6); position: relative; z-index: 1; }
@@ -471,7 +454,7 @@ body {
 .why-note strong { color: #1A1E14; }
 
 /* ══════════════════════
-   FOR WHOM (event)
+   FOR WHOM
 ══════════════════════ */
 .ev-fw-grid {
   display: grid;
@@ -495,56 +478,150 @@ body {
   font-style: italic;
 }
 
-/* ══════════════════════
-   WHAT INSIDE (stats)
-══════════════════════ */
-.inside-stats {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 14px;
-  margin-top: 52px;
+/* ══════════════════════════════════════
+   INSIDE PHOTO GRID — вертикальный стек
+══════════════════════════════════════ */
+.inside-photo-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 48px;
 }
-.istat {
-  padding: 28px 24px;
-  border-radius: var(--radius);
-  text-align: center;
+
+.iphoto-wide { /* оставляем класс, но теперь все одинаковые */ }
+
+.iphoto-card {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: default;
+  height: 240px;
+  width: 100%;
+  transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
 }
-.istat-num {
-  font-family: 'Inter', sans-serif;
-  font-size: 38px; font-weight: 900;
-  color: #6A8C2A; letter-spacing: -0.04em;
-  display: block; margin-bottom: 6px;
+.iphoto-card:hover { transform: scale(1.012); }
+
+.iphoto-bg {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+  will-change: transform;
 }
-.istat-label {
-  font-size: 13px; color: rgba(26,30,20,0.55); line-height: 1.55;
+.iphoto-card:hover .iphoto-bg { transform: scale(1.05); }
+
+.iphoto-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(8,12,6,0.90) 0%,
+    rgba(8,12,6,0.40) 50%,
+    rgba(8,12,6,0.08) 100%
+  );
+  transition: opacity 0.3s;
 }
-.inside-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-  margin-top: 20px;
+.iphoto-card:hover .iphoto-overlay { opacity: 0.95; }
+
+.iphoto-overlay--gold {
+  background: linear-gradient(
+    to top,
+    rgba(5,3,0,0.93) 0%,
+    rgba(60,30,0,0.40) 50%,
+    rgba(8,12,6,0.08) 100%
+  );
 }
-.inside-li {
-  display: flex; align-items: center; gap: 9px;
-  padding: 12px 16px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 9px;
-  font-size: 13px; color: rgba(26,30,20,0.6);
-}
-.inside-li::before {
+
+/* Зелёная черта слева */
+.iphoto-card::before {
   content: '';
-  width: 5px; height: 5px; border-radius: 50%;
-  background: #97BC53; flex-shrink: 0;
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: #97BC53;
+  z-index: 4;
+  opacity: 0;
+  transition: opacity 0.3s;
 }
-.inside-note {
-  margin-top: 24px;
-  padding: 18px 24px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.08);
-  border-radius: 10px;
-  font-size: 14px; color: rgba(26,30,20,0.6);
-  font-style: italic; line-height: 1.7;
+.iphoto-card:hover::before { opacity: 1; }
+.iphoto-afterparty::before { background: #FFB830; }
+
+.iphoto-content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 26px 32px;
+  z-index: 2;
+}
+
+.iphoto-icon { display: none; } /* убираем эмодзи */
+
+.iphoto-num {
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  font-weight: 900;
+  color: #97BC53;
+  line-height: 0.9;
+  letter-spacing: -0.04em;
+  text-shadow: 0 4px 24px rgba(0,0,0,0.6);
+  margin-bottom: 4px;
+}
+
+.iphoto-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  text-shadow: 0 2px 12px rgba(0,0,0,0.7);
+  margin-bottom: 5px;
+}
+
+.iphoto-sub {
+  font-size: 13px;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.5;
+  text-shadow: 0 1px 6px rgba(0,0,0,0.6);
+  max-width: 600px;
+}
+
+.iphoto-badge-vip {
+  display: inline-flex;
+  align-items: center;
+  background: rgba(255,160,40,0.95);
+  color: #1A0A00;
+  font-family: 'Inter', sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  padding: 4px 12px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+  width: fit-content;
+  box-shadow: 0 4px 16px rgba(255,140,0,0.4);
+}
+
+.iphoto-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  border: 1.5px solid transparent;
+  transition: border-color 0.3s;
+  pointer-events: none;
+  z-index: 3;
+}
+.iphoto-card:hover::after {
+  border-color: rgba(151,188,83,0.4);
+}
+.iphoto-afterparty:hover::after {
+  border-color: rgba(255,160,40,0.4);
 }
 
 /* ══════════════════════
@@ -946,7 +1023,7 @@ body {
 .org-desc { font-size: 14px; color: rgba(26,30,20,0.6); line-height: 1.65; }
 
 /* ══════════════════════
-   FINAL CTA (event)
+   FINAL CTA
 ══════════════════════ */
 .ev-final {
   background: linear-gradient(135deg, rgba(151,188,83,0.1), rgba(200,220,160,0.06));
@@ -980,7 +1057,6 @@ body {
   position: relative;
 }
 
-/* grain disabled for light theme */
 .ev-page::after { display: none; }
 
 /* ══════════════════════
@@ -994,86 +1070,41 @@ body {
   .topics-grid .topic-card:first-child { grid-column: auto; }
   .why-grid { grid-template-columns: 1fr 1fr; }
   .ev-fw-grid { grid-template-columns: 1fr; }
-  .inside-stats { grid-template-columns: 1fr 1fr; }
   .ev-hero-stats { grid-template-columns: repeat(3, auto); }
 }
+@media (max-width: 768px) {
+  .iphoto-card { height: 200px; }
+  .iphoto-num { font-size: 48px; }
+  .iphoto-title { font-size: 17px; }
+  .iphoto-content { padding: 18px 20px; }
+}
 @media (max-width: 640px) {
-  .why-grid, .inside-stats { grid-template-columns: 1fr; }
+  .why-grid { grid-template-columns: 1fr; }
   .ev-hero-stats { display: none; }
-  .inside-list { grid-template-columns: 1fr; }
   .form-row { grid-template-columns: 1fr; }
   body { padding-bottom: 0; }
-
-  /* Digital section mobile */
   .digital-callout { padding: 24px 20px; }
   .digital-note { padding: 16px 18px; }
-
-  /* Prevent any block from overflowing viewport */
-  .section, .ev-hero, .ev-final, .digital-section {
-    overflow-x: hidden;
-  }
-
-  /* Hero mobile fixes */
+  .section, .ev-hero, .ev-final, .digital-section { overflow-x: hidden; }
   .ev-hero {
     justify-content: center;
     padding: calc(var(--nav-h) + 16px) 0 16px;
     text-align: center;
     min-height: 100svh;
   }
-  .ev-hero .container {
-    align-items: center;
-    justify-content: center;
-  }
+  .ev-hero .container { align-items: center; justify-content: center; }
   .ev-hero-eyebrow { margin-bottom: 12px; }
   .ev-live { font-size: 10px; padding: 5px 12px; }
-  .ev-hero-title {
-    font-size: clamp(32px, 10vw, 48px);
-    line-height: 0.95;
-    margin-bottom: 6px;
-  }
-  .ev-hero-title-2 {
-    font-size: clamp(14px, 4.5vw, 20px);
-    margin-bottom: 16px;
-  }
-  .ev-hero-sub {
-    font-size: 14px;
-    margin-bottom: 12px;
-    text-align: center;
-    max-width: 320px;
-  }
-  .ev-hero-topics {
-    margin-bottom: 16px;
-    justify-content: center;
-  }
+  .ev-hero-title { font-size: clamp(32px, 10vw, 48px); line-height: 0.95; margin-bottom: 6px; }
+  .ev-hero-title-2 { font-size: clamp(14px, 4.5vw, 20px); margin-bottom: 16px; }
+  .ev-hero-sub { font-size: 14px; margin-bottom: 12px; text-align: center; max-width: 320px; }
+  .ev-hero-topics { margin-bottom: 16px; justify-content: center; }
   .ev-topic { font-size: 11px; padding: 4px 10px; }
-  .ev-hero-btns {
-    flex-direction: column;
-    width: 100%;
-    gap: 8px;
-    margin-bottom: 20px;
-  }
-  .ev-hero-btns .btn {
-    width: 100%;
-    justify-content: center;
-    padding: 15px;
-    font-size: 14px;
-  }
-  /* Move meta below buttons on mobile */
-  .ev-hero-meta {
-    order: 10;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 6px;
-    margin-bottom: 0;
-    margin-top: 4px;
-  }
-  .ev-meta-tag {
-    font-size: 11px;
-    padding: 6px 10px;
-  }
+  .ev-hero-btns { flex-direction: column; width: 100%; gap: 8px; margin-bottom: 20px; }
+  .ev-hero-btns .btn { width: 100%; justify-content: center; padding: 15px; font-size: 14px; }
+  .ev-hero-meta { order: 10; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 0; margin-top: 4px; }
+  .ev-meta-tag { font-size: 11px; padding: 6px 10px; }
 }
-
 </style>
 </head>
 <body class="ev-page">
@@ -1308,37 +1339,76 @@ body {
 <div class="divider"></div>
 
 <!-- ══════════════════════════
-     WHAT INSIDE
+     WHAT INSIDE — фото-сетка
 ══════════════════════════ -->
 <section class="section section--dark">
 <div class="container">
   <span class="s-label">Что внутри</span>
   <h2 class="s-title">Что тебя ждёт</h2>
 
-  <div class="inside-stats">
-    <div class="istat card">
-      <span class="istat-num">5</span>
-      <div class="istat-label">тематических блоков</div>
-    </div>
-    <div class="istat card">
-      <span class="istat-num">8</span>
-      <div class="istat-label">экспертов</div>
-    </div>
-  </div>
+  <div class="inside-photo-grid">
 
-  <div class="inside-list">
-    <div class="inside-li">2 эксперта в каждой теме</div>
-    <div class="inside-li">Живой вопрос-ответ с залом</div>
-    <div class="inside-li">Разборы реальных кейсов</div>
-    <div class="inside-li">Разборы проектов участников</div>
-    <div class="inside-li">Кофе-брейки и кейтеринг</div>
-    <div class="inside-li">Нетворкинг в течение дня</div>
-    <div class="inside-li">Партнёрская зона</div>
-    <div class="inside-li">VIP afterparty вечером</div>
-  </div>
+    <!-- 1. Широкая: 8 экспертов -->
+    <div class="iphoto-card iphoto-wide">
+      <div class="iphoto-bg" style="background-image: url('конференцияшатре.png')"></div>
+      <div class="iphoto-overlay"></div>
+      <div class="iphoto-content">
+        <div class="iphoto-title">8 экспертов</div>
+        <div class="iphoto-sub">Практики с реальным опытом в Web3, AI, маркетинге и праве</div>
+      </div>
+    </div>
 
-  <div class="inside-note">
-    Это день, после которого остаются не только впечатления, но и конкретные мысли, ответы, связи и идеи для роста.
+    <!-- 2. Живой Q&A -->
+    <div class="iphoto-card">
+      <div class="iphoto-bg" style="background-image: url('Выступление.png')"></div>
+      <div class="iphoto-overlay"></div>
+      <div class="iphoto-content">
+        <div class="iphoto-title">Живой вопрос-ответ с залом</div>
+        <div class="iphoto-sub">60 минут Q&A в каждом блоке</div>
+      </div>
+    </div>
+
+    <!-- 3. Разборы кейсов -->
+    <div class="iphoto-card">
+      <div class="iphoto-bg" style="background-image: url('_MG_0247.JPG')"></div>
+      <div class="iphoto-overlay"></div>
+      <div class="iphoto-content">
+        <div class="iphoto-title">Разборы реальных кейсов</div>
+        <div class="iphoto-sub">Живой анализ задач участников</div>
+      </div>
+    </div>
+
+    <!-- 4. Широкая: Кофе-брейки -->
+    <div class="iphoto-card iphoto-wide">
+      <div class="iphoto-bg" style="background-image: url('Сетевое.png')"></div>
+      <div class="iphoto-overlay"></div>
+      <div class="iphoto-content">
+        <div class="iphoto-title">Кофе-брейки и кейтеринг</div>
+        <div class="iphoto-sub">Включены в оба типа билета · пространство для неформального общения</div>
+      </div>
+    </div>
+
+    <!-- 5. Нетворкинг -->
+    <div class="iphoto-card">
+      <div class="iphoto-bg" style="background-image: url('Деловой.png')"></div>
+      <div class="iphoto-overlay"></div>
+      <div class="iphoto-content">
+        <div class="iphoto-title">Нетворкинг в течение дня</div>
+        <div class="iphoto-sub">200+ участников — предприниматели, практики, инвесторы</div>
+      </div>
+    </div>
+
+    <!-- 6. Широкая: VIP Afterparty -->
+    <div class="iphoto-card iphoto-wide iphoto-afterparty">
+      <div class="iphoto-bg" style="background-image: url('hero-afterparty.png')"></div>
+      <div class="iphoto-overlay iphoto-overlay--gold"></div>
+      <div class="iphoto-content">
+        <div class="iphoto-badge-vip">VIP</div>
+        <div class="iphoto-title">Afterparty вечером</div>
+        <div class="iphoto-sub">Шашлык-пати · кавер-бенд · тесный нетворкинг со спикерами · 22:00–03:00</div>
+      </div>
+    </div>
+
   </div>
 
 </div>
