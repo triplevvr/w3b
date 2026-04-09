@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>WEB3 AI VILLAGE. БИЗНЕС TALK — 25 апреля 2026, Минск</title>
-<meta name="description" content="Выездное деловое событие. Web3, AI, цифровая экономика, маркетинг, регуляторика. 25 апреля 2026, Комарово Village, 4 км от Минска. 200+ участников, 8 экспертов.">
+<title>WEB3 AI VILLAGE. БИЗНЕС TALK — 2 мая 2026, Минск</title>
+<meta name="description" content="Выездное деловое событие. Web3, AI, цифровая экономика, маркетинг, регуляторика. 2 мая 2026, Комарово Village, 4 км от Минска. 200+ участников, 8 экспертов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -629,27 +629,31 @@ body {
 ══════════════════════ */
 .topics-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
   gap: 14px;
   margin-top: 52px;
 }
-.topics-grid .topic-card:first-child { grid-column: 1 / 3; }
+.topics-grid .topic-card:first-child { grid-column: auto; }
 .topic-card {
-  padding: 30px 26px;
+  padding: 28px 26px;
   border-radius: var(--radius);
   position: relative; overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 .topic-card:hover { border-color: var(--border2) !important; }
 .topic-num {
   font-family: 'Inter', sans-serif;
   font-size: 10px; font-weight: 700;
   letter-spacing: 0.2em; color: rgba(26,30,20,0.3);
-  margin-bottom: 12px;
+  margin-bottom: 8px;
 }
 .topic-card h3 {
   font-family: 'Inter', sans-serif;
   font-size: 17px; font-weight: 800;
-  margin-bottom: 10px; letter-spacing: -0.02em;
+  margin-bottom: 8px; letter-spacing: -0.02em;
 }
 .topic-card p { font-size: 14px; color: var(--muted); line-height: 1.7; }
 
@@ -1057,6 +1061,394 @@ body {
   position: relative;
 }
 
+/* ══════════════════════
+   PROGRAM LIST (новый блок)
+══════════════════════ */
+.program-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 48px;
+}
+
+.prog-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+  padding: 20px 24px;
+  transition: border-color 0.2s;
+}
+
+.prog-time {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 800;
+  color: #6A8C2A;
+  min-width: 44px;
+  padding-top: 2px;
+  flex-shrink: 0;
+  letter-spacing: 0.02em;
+}
+
+.prog-main { flex: 1; min-width: 0; }
+
+.prog-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1E14;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+
+.prog-desc {
+  font-size: 13px;
+  color: rgba(26,30,20,0.5);
+  line-height: 1.5;
+}
+
+/* Кликабельные блоки */
+.prog-block {
+  cursor: pointer;
+  padding: 0;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0;
+}
+.prog-block:hover { border-color: rgba(151,188,83,0.4); }
+.prog-block.open { border-color: rgba(151,188,83,0.5); background: rgba(151,188,83,0.04); }
+
+.prog-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px 24px;
+  width: 100%;
+}
+
+.prog-block .prog-time {
+  padding-top: 0;
+  min-width: 52px;
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.prog-header-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+  text-align: left;
+}
+
+.prog-block .prog-header > div:first-child {
+  /* prog-time — ничего дополнительного */
+}
+
+.prog-header > div:nth-child(2) {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+/* Стрелка */
+.prog-arrow {
+  font-size: 16px;
+  color: #97BC53;
+  flex-shrink: 0;
+  transition: transform 0.3s;
+  font-weight: 700;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(151,188,83,0.1);
+  border-radius: 50%;
+  border: 1px solid rgba(151,188,83,0.25);
+}
+.prog-block.open .prog-arrow { transform: rotate(180deg); }
+
+/* Спикеры — скрыты по умолчанию */
+.prog-speakers {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1);
+  border-top: 0px solid rgba(0,0,0,0.07);
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0 24px;
+}
+.prog-block.open .prog-speakers {
+  max-height: 400px;
+  border-top: 1px solid rgba(0,0,0,0.07);
+  padding: 16px 24px 20px;
+  gap: 14px;
+}
+
+.prog-speaker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.prog-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: rgba(151,188,83,0.1);
+  border: 1px solid rgba(151,188,83,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  color: #6A8C2A;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.prog-avatar img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+
+.prog-spk-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1E14;
+  margin-bottom: 2px;
+}
+.prog-spk-role {
+  font-size: 12px;
+  color: rgba(26,30,20,0.5);
+}
+
+/* VIP строка */
+.prog-vip {
+  background: rgba(255,160,40,0.06);
+  border-color: rgba(255,160,40,0.3);
+}
+.prog-vip .prog-time { color: #E07B00; }
+
+.headliners-wrap {
+  margin: 40px 0 48px;
+}
+.headliners-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(26,30,20,0.4);
+  margin-bottom: 14px;
+}
+/* Хедлайнеры */
+.headliners {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.headliner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 16px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.headliner-card:hover {
+  border-color: rgba(151,188,83,0.4);
+  transform: translateY(-2px);
+}
+.headliner-photo {
+  width: 88px;
+  height: 88px;
+  border-radius: 50%;
+  background: rgba(151,188,83,0.12);
+  border: 2px solid rgba(151,188,83,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 18px;
+  font-weight: 800;
+  color: #6A8C2A;
+  margin-bottom: 16px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.headliner-photo img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+}
+.headliner-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1A1E14;
+  margin-bottom: 4px;
+  letter-spacing: -0.01em;
+}
+.headliner-role {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6A8C2A;
+  margin-bottom: 10px;
+  letter-spacing: 0.02em;
+}
+.headliner-desc {
+  font-size: 13px;
+  color: rgba(26,30,20,0.55);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .headliners { grid-template-columns: 1fr; }
+}
+
+/* Скрытая часть программы */
+.prog-hidden {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.6s cubic-bezier(0.22,1,0.36,1);
+}
+.prog-hidden.open {
+  max-height: 3000px;
+}
+
+/* Timeline accordion */
+.tl-hidden {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s cubic-bezier(0.22,1,0.36,1);
+}
+.tl-hidden.open {
+  max-height: 2000px;
+}
+.tl-toggle-btn {
+  margin-top: 24px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: transparent;
+  border: none;
+  padding: 10px 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #6A8C2A;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.tl-toggle-btn:hover { color: #4A6318; }
+.tl-toggle-btn.open { color: #4A6318; }
+
+/* Специальные блоки в topics */
+.topic-special {
+  background: rgba(151,188,83,0.07) !important;
+  border: 1px solid rgba(151,188,83,0.35) !important;
+  position: relative;
+  overflow: hidden;
+}
+.topic-special::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: #97BC53;
+  border-radius: 3px 0 0 3px;
+}
+.topic-special .topic-num { color: #6A8C2A; }
+.topic-special h3 { color: #1A1E14; }
+
+/* Спикеры в карточках тем */
+.topic-speakers {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 18px;
+  padding-top: 18px;
+  border-top: 1px solid rgba(0,0,0,0.07);
+}
+.topic-speaker {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.topic-avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(151,188,83,0.12);
+  border: 1px solid rgba(151,188,83,0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #6A8C2A;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+.topic-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.topic-speaker-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding-top: 2px;
+}
+.topic-speaker-name {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  color: #1A1E14;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.topic-speaker-role {
+  font-size: 13px;
+  color: rgba(26,30,20,0.5);
+  line-height: 1.4;
+}
+.topic-speaker-btn {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 6px;
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #6A8C2A;
+  text-decoration: none;
+  border-bottom: 1px solid rgba(107,140,42,0.3);
+  padding-bottom: 1px;
+  transition: border-color 0.2s, color 0.2s;
+  width: fit-content;
+}
+.topic-speaker-btn:hover {
+  color: #4A6318;
+  border-color: #4A6318;
+}
+
 .ev-page::after { display: none; }
 
 /* ══════════════════════
@@ -1066,7 +1458,7 @@ body {
   .concept-grid, .digital-inner, .adv-grid,
   .location-grid, .tickets-grid, .reg-inner,
   .org-grid { grid-template-columns: 1fr; gap: 28px; }
-  .topics-grid { grid-template-columns: 1fr; }
+  .topics-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .topics-grid .topic-card:first-child { grid-column: auto; }
   .why-grid { grid-template-columns: 1fr 1fr; }
   .ev-fw-grid { grid-template-columns: 1fr; }
@@ -1159,7 +1551,7 @@ body {
   </div>
 
   <div class="ev-hero-meta">
-    <div class="ev-meta-tag accent">📅 25 апреля 2026</div>
+    <div class="ev-meta-tag accent">📅 2 мая 2026</div>
     <div class="ev-meta-tag">📍 Комарово Village · 4 км от Минска</div>
     <div class="ev-meta-tag">⏱ 11:00 — 03:00</div>
   </div>
@@ -1178,6 +1570,125 @@ body {
 <div class="divider"></div>
 
 <!-- ══════════════════════════
+     TOPICS
+══════════════════════════ -->
+<section class="section" id="topics">
+<div class="container">
+  <span class="s-label">Ключевые темы дня</span>
+  <h2 class="s-title">4 темы · 8 экспертов</h2>
+  <p class="s-sub">Не слайды ради слайдов. Каждая тема — живой диалог с залом.</p>
+
+  <div class="topics-grid">
+    <div class="topic-card card">
+      <div class="topic-num">ТЕМА 01 ——</div>
+      <h3>Цифровая экономика, Web3 и крипта</h3>
+      <p>Не как хайп и «монетки ради монеток», а как реальные инструменты новой экономики — гибкость, переводы, расчёты, новые модели взаимодействия и понимание того, куда движется рынок.</p>
+      <div class="topic-speakers">
+        <div class="topic-speaker">
+          <div class="topic-avatar">СХ</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Сергей Хитров</div>
+            <div class="topic-speaker-role">Основатель Blockchain Life</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 2</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card card">
+      <div class="topic-num">ТЕМА 02 ——</div>
+      <h3>AI для бизнеса</h3>
+      <p>Как ускорять процессы, снижать ручной труд, усиливать команды и внедрять AI с практической пользой — без переплаты и лишнего риска.</p>
+      <div class="topic-speakers">
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 1</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 2</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card card">
+      <div class="topic-num">ТЕМА 03 ——</div>
+      <h3>Маркетинг, рост и RevOps</h3>
+      <p>Что сегодня реально помогает бизнесу расти, усиливать продажи, маркетинг и управляемость в условиях нового рынка.</p>
+      <div class="topic-speakers">
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 1</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 2</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card card">
+      <div class="topic-num">ТЕМА 04 ——</div>
+      <h3>Регуляторика, право и бухгалтерия</h3>
+      <p>Как работать с новыми цифровыми инструментами аккуратно, легально и без лишних рисков в белорусском контексте.</p>
+      <div class="topic-speakers">
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 1</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+        <div class="topic-speaker">
+          <div class="topic-avatar">—</div>
+          <div class="topic-speaker-info">
+            <div class="topic-speaker-name">Спикер 2</div>
+            <div class="topic-speaker-role">Будет объявлен</div>
+            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="topic-card topic-special card">
+      <div class="topic-num">СПЕЦИАЛЬНЫЙ БЛОК ——</div>
+      <h3>🎤 Разборы проектов</h3>
+      <p>Живая обратная связь по идеям, продуктам, гипотезам и бизнес-задачам участников. 3 питча по 20 минут — честная обратная связь от экспертов и зала.</p>
+    </div>
+    <div class="topic-card topic-special card">
+      <div class="topic-num">СПЕЦИАЛЬНЫЙ БЛОК ——</div>
+      <h3>₿ Крипто-панелька</h3>
+      <p>Панельная дискуссия о криптовалюте — откровенный разговор о трендах, рисках и возможностях с несколькими экспертами одновременно.</p>
+    </div>
+  </div>
+
+</div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ══════════════════════════
      WHAT INSIDE — фото-сетка
 ══════════════════════════ -->
 <section class="section section--dark">
@@ -1186,16 +1697,6 @@ body {
   <h2 class="s-title">Что тебя ждёт</h2>
 
   <div class="inside-photo-grid">
-
-    <!-- 1. 8 экспертов -->
-    <div class="iphoto-card iphoto-wide">
-      <div class="iphoto-bg" style="background-image: url('konferenciya-shatre.png'); background-position: center 30%;"></div>
-      <div class="iphoto-overlay"></div>
-      <div class="iphoto-content">
-        <div class="iphoto-title">8 экспертов</div>
-        <div class="iphoto-sub">Практики с реальным опытом в Web3, AI, маркетинге и праве</div>
-      </div>
-    </div>
 
     <!-- 2. Живой Q&A -->
     <div class="iphoto-card">
@@ -1249,63 +1750,6 @@ body {
     </div>
 
   </div>
-</div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════════════
-     CONCEPT
-══════════════════════════ -->
-<section class="section concept-section" id="concept">
-<div class="container">
-  <span class="s-label">Концепция события</span>
-  <h2 class="s-title">Здесь зал — не зритель.<br>Здесь зал — участник.</h2>
-
-  <div class="concept-grid">
-    <div class="concept-text">
-      <div class="concept-blockquote">
-        <p class="concept-lead">Каждый блок — это не монолог со сцены.<br>Это <strong>диалог с залом.</strong></p>
-        <p>Два эксперта с разной экспертизой коротко задают контекст. А дальше — <strong>60 минут живых вопросов и разборов</strong> на основе реальных кейсов участников.</p>
-        <p>Ты уходишь не с чужими слайдами, а с ответами на <strong>свои вопросы</strong>.</p>
-      </div>
-    </div>
-
-    <div class="concept-scheme">
-      <div class="scheme-block card">
-        <div class="scheme-icon">🎙️</div>
-        <div>
-          <h4>Эксперт 1 + Эксперт 2</h4>
-          <p>Короткий контекст темы — 15 мин каждый</p>
-        </div>
-      </div>
-      <div class="scheme-arrow">↓</div>
-      <div class="scheme-block center">
-        <div class="scheme-icon">💬</div>
-        <div>
-          <h4>Живой Q&A с залом — 60 мин</h4>
-          <p>Вопросы, кейсы, реальные задачи участников</p>
-        </div>
-      </div>
-      <div class="scheme-arrow">↓</div>
-      <div class="scheme-block card">
-        <div class="scheme-icon">🎯</div>
-        <div>
-          <h4>Разбор из двух экспертиз</h4>
-          <p>Два взгляда на один вопрос — глубже и практичнее</p>
-        </div>
-      </div>
-      <div class="scheme-arrow">↓</div>
-      <div class="scheme-block center">
-        <div class="scheme-icon">✅</div>
-        <div>
-          <h4>Польза, которую можно унести</h4>
-          <p>Конкретные ответы, инсайты и следующие шаги</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
 </div>
 </section>
 
@@ -1414,48 +1858,6 @@ body {
 </section>
 
 <!-- ══════════════════════════
-     TOPICS
-══════════════════════════ -->
-<section class="section" id="topics">
-<div class="container">
-  <span class="s-label">Ключевые темы дня</span>
-  <h2 class="s-title">5 тем · 8 экспертов</h2>
-  <p class="s-sub">Не слайды ради слайдов. Каждая тема — живой диалог с залом.</p>
-
-  <div class="topics-grid">
-    <div class="topic-card card">
-      <div class="topic-num">ТЕМА 01 ——</div>
-      <h3>Цифровая экономика, Web3 и крипта</h3>
-      <p>Не как хайп и «монетки ради монеток», а как реальные инструменты новой экономики — гибкость, переводы, расчёты, новые модели взаимодействия и понимание того, куда движется рынок.</p>
-    </div>
-    <div class="topic-card card">
-      <div class="topic-num">ТЕМА 02 ——</div>
-      <h3>AI для бизнеса</h3>
-      <p>Как ускорять процессы, снижать ручной труд, усиливать команды и внедрять AI с практической пользой — без переплаты и лишнего риска.</p>
-    </div>
-    <div class="topic-card card">
-      <div class="topic-num">ТЕМА 03 ——</div>
-      <h3>Маркетинг, рост и RevOps</h3>
-      <p>Что сегодня реально помогает бизнесу расти, усиливать продажи, маркетинг и управляемость в условиях нового рынка.</p>
-    </div>
-    <div class="topic-card card">
-      <div class="topic-num">ТЕМА 04 ——</div>
-      <h3>Регуляторика, право и бухгалтерия</h3>
-      <p>Как работать с новыми цифровыми инструментами аккуратно, легально и без лишних рисков в белорусском контексте.</p>
-    </div>
-    <div class="topic-card card" style="grid-column: 1 / -1;">
-      <div class="topic-num">СПЕЦИАЛЬНЫЙ БЛОК ——</div>
-      <h3>🎤 Разборы проектов</h3>
-      <p>Живая обратная связь по идеям, продуктам, гипотезам и бизнес-задачам участников. 3 питча по 20 минут — честная обратная связь от экспертов и зала.</p>
-    </div>
-  </div>
-
-</div>
-</section>
-
-<div class="divider"></div>
-
-<!-- ══════════════════════════
      DIGITAL ECO BLOCK
 ══════════════════════════ -->
 <section class="section digital-section">
@@ -1527,88 +1929,227 @@ body {
   <span class="s-label">Программа дня</span>
   <h2 class="s-title">Как будет устроен день</h2>
 
-  <div class="timeline">
-    <div class="tl-item">
-      <div class="tl-dot">🚌</div>
-      <div class="tl-time">10:00</div>
-      <div class="tl-content">
-        <h4>Трансфер из Минска</h4>
-        <p>Организованный автобус до площадки</p>
+  <!-- Хедлайнеры -->
+  <div class="headliners-wrap">
+    <div class="headliners-label">Хедлайнеры</div>
+    <div class="headliners">
+    <div class="headliner-card">
+      <div class="headliner-photo">СХ</div>
+      <div class="headliner-name">Сергей Хитров</div>
+      <div class="headliner-role">Основатель Blockchain Life</div>
+      <div class="headliner-desc">Один из ведущих организаторов крипто-конференций в СНГ, эксперт по Web3 и блокчейн-индустрии</div>
+    </div>
+    <div class="headliner-card">
+      <div class="headliner-photo">—</div>
+      <div class="headliner-name">Спикер 2</div>
+      <div class="headliner-role">Будет объявлен</div>
+      <div class="headliner-desc">Описание спикера появится после подтверждения участия</div>
+    </div>
+    <div class="headliner-card">
+      <div class="headliner-photo">—</div>
+      <div class="headliner-name">Спикер 3</div>
+      <div class="headliner-role">Будет объявлен</div>
+      <div class="headliner-desc">Описание спикера появится после подтверждения участия</div>
+    </div>
+  </div><!-- /headliners -->
+  </div><!-- /headliners-wrap -->
+
+  <div class="program-list">
+
+    <!-- Простой пункт -->
+    <div class="prog-item prog-simple">
+      <div class="prog-time">10:00</div>
+      <div class="prog-main">
+        <div class="prog-title">Трансфер из Минска</div>
+        <div class="prog-desc">Организованный автобус до площадки</div>
       </div>
     </div>
-    <div class="tl-item key">
-      <div class="tl-dot">▶️</div>
-      <div class="tl-time">11:00</div>
-      <div class="tl-content">
-        <h4>Старт программы</h4>
-        <p>Открытие события. Нетворкинг-зона и партнёрская экспозиция</p>
+
+    <!-- Простой пункт -->
+    <div class="prog-item prog-simple">
+      <div class="prog-time">11:00</div>
+      <div class="prog-main">
+        <div class="prog-title">Старт программы</div>
+        <div class="prog-desc">Открытие события. Нетворкинг-зона и партнёрская экспозиция</div>
       </div>
     </div>
-    <div class="tl-item key">
-      <div class="tl-dot">①</div>
-      <div class="tl-time"></div>
-      <div class="tl-content">
-        <h4>Блок 1: Цифровая экономика, Web3, крипта</h4>
-        <p>2 эксперта · контекст → 60 мин Q&A с залом</p>
+
+    <!-- Блок 1 — с раскрытием спикеров -->
+    <div class="prog-hidden" id="prog-more">
+
+    <div class="prog-item prog-block" onclick="progToggle(this)">
+        <div class="prog-header">
+          <div class="prog-time">11:30</div>
+          <div>
+            <div class="prog-title">Цифровая экономика, Web3 и крипта</div>
+            <div class="prog-desc">2 эксперта · контекст → 60 мин Q&A с залом</div>
+          </div>
+          <div class="prog-arrow">↓</div>
+        </div>
+        <div class="prog-speakers">
+          <div class="prog-speaker">
+            <div class="prog-avatar">СХ</div>
+            <div>
+              <div class="prog-spk-name">Сергей Хитров</div>
+              <div class="prog-spk-role">Основатель Blockchain Life</div>
+            </div>
+          </div>
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 2</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Блок 2 -->
+    <div class="prog-item prog-block" onclick="progToggle(this)">
+        <div class="prog-header">
+          <div class="prog-time">13:00</div>
+          <div>
+            <div class="prog-title">AI для бизнеса</div>
+            <div class="prog-desc">2 эксперта · практические инструменты → 60 мин Q&A с залом</div>
+          </div>
+          <div class="prog-arrow">↓</div>
+        </div>
+        <div class="prog-speakers">
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 1</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 2</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Блок 3: Разборы проектов -->
+    <div class="prog-item prog-block" onclick="progToggle(this)">
+        <div class="prog-header">
+          <div class="prog-time">14:30</div>
+          <div>
+            <div class="prog-title">Разборы проектов</div>
+            <div class="prog-desc">3 питча по 20 мин · честная обратная связь от экспертов и зала</div>
+          </div>
+          <div class="prog-arrow">↓</div>
+        </div>
+        <div class="prog-speakers">
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 1</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 2</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Блок 4 -->
+    <div class="prog-item prog-block" onclick="progToggle(this)">
+        <div class="prog-header">
+          <div class="prog-time">16:00</div>
+          <div>
+            <div class="prog-title">Маркетинг, рост, RevOps, Web3 и AI</div>
+            <div class="prog-desc">2 эксперта · что реально работает → 60 мин Q&A с залом</div>
+          </div>
+          <div class="prog-arrow">↓</div>
+        </div>
+        <div class="prog-speakers">
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 1</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 2</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Блок 5 -->
+    <div class="prog-item prog-block" onclick="progToggle(this)">
+        <div class="prog-header">
+          <div class="prog-time">17:30</div>
+          <div>
+            <div class="prog-title">Регуляторика, право, бухгалтерия</div>
+            <div class="prog-desc">2 эксперта · безопасная работа → 60 мин Q&A с залом</div>
+          </div>
+          <div class="prog-arrow">↓</div>
+        </div>
+        <div class="prog-speakers">
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 1</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+          <div class="prog-speaker">
+            <div class="prog-avatar">—</div>
+            <div>
+              <div class="prog-spk-name">Спикер 2</div>
+              <div class="prog-spk-role">Будет объявлен</div>
+            </div>
+          </div>
+        </div>
+    </div>
+
+    <!-- Простой пункт: кофе -->
+    <div class="prog-item prog-simple">
+      <div class="prog-time">перерывы</div>
+      <div class="prog-main">
+        <div class="prog-title">Кофе-брейки и кейтеринг</div>
+        <div class="prog-desc">Между блоками · нетворкинг · свободное общение</div>
       </div>
     </div>
-    <div class="tl-item key">
-      <div class="tl-dot">②</div>
-      <div class="tl-time"></div>
-      <div class="tl-content">
-        <h4>Блок 2: AI для бизнеса</h4>
-        <p>2 эксперта · практические инструменты → 60 мин Q&A с залом</p>
+
+    <!-- Простой пункт: финал -->
+    <div class="prog-item prog-simple">
+      <div class="prog-time">20:00</div>
+      <div class="prog-main">
+        <div class="prog-title">Завершение основной программы</div>
+        <div class="prog-desc">Финальный нетворкинг перед afterparty</div>
       </div>
     </div>
-    <div class="tl-item key">
-      <div class="tl-dot">🎤</div>
-      <div class="tl-time"></div>
-      <div class="tl-content">
-        <h4>Блок 3: Разборы проектов</h4>
-        <p>3 питча по 20 мин · честная обратная связь от экспертов и зала</p>
+
+    <!-- VIP -->
+    <div class="prog-item prog-vip">
+      <div class="prog-time">22:00</div>
+      <div class="prog-main">
+        <div class="prog-title">VIP Afterparty — до 03:00</div>
+        <div class="prog-desc">Шашлык-пати · кавер-бенд · неформальный нетворкинг · тесный контакт со спикерами</div>
       </div>
     </div>
-    <div class="tl-item key">
-      <div class="tl-dot">③</div>
-      <div class="tl-time"></div>
-      <div class="tl-content">
-        <h4>Блок 4: Маркетинг, рост, RevOps, Web3 и AI</h4>
-        <p>2 эксперта · что реально работает → 60 мин Q&A с залом</p>
-      </div>
-    </div>
-    <div class="tl-item key">
-      <div class="tl-dot">④</div>
-      <div class="tl-time"></div>
-      <div class="tl-content">
-        <h4>Блок 5: Регуляторика, право, бухгалтерия</h4>
-        <p>2 эксперта · безопасная работа → 60 мин Q&A с залом</p>
-      </div>
-    </div>
-    <div class="tl-item">
-      <div class="tl-dot">☕</div>
-      <div class="tl-time"></div>
-      <div class="tl-content">
-        <h4>Кофе-брейки и кейтеринг</h4>
-        <p>Между блоками · нетворкинг · свободное общение</p>
-      </div>
-    </div>
-    <div class="tl-item key">
-      <div class="tl-dot">🏁</div>
-      <div class="tl-time">20:00</div>
-      <div class="tl-content">
-        <h4>Завершение основной программы</h4>
-        <p>Финальный нетворкинг перед afterparty</p>
-      </div>
-    </div>
-    <div class="tl-item vip">
-      <div class="tl-dot">🔥</div>
-      <div class="tl-time">22:00</div>
-      <div class="tl-content">
-        <h4>VIP Afterparty — до 03:00</h4>
-        <p>Шашлык-пати · кавер-бенд · неформальный нетворкинг · тесный контакт со спикерами и партнёрами</p>
-      </div>
-    </div>
-  </div>
+
+    </div><!-- /prog-hidden -->
+
+  </div><!-- /program-list -->
+
+  <button class="tl-toggle-btn" id="prog-toggle-btn" onclick="progMoreToggle()">
+    Подробнее о программе ↓
+  </button>
 
 </div>
 </section>
@@ -1842,7 +2383,7 @@ body {
     </div>
     <div class="faq-item">
       <button class="faq-q" onclick="faqToggle(this)">Можно ли вернуть билет?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Возврат возможен до 18 апреля 2026 включительно. После этой даты — только обмен билета на другого участника. Напишите нам в Telegram для оформления.</div></div>
+      <div class="faq-body"><div class="faq-body-inner">Возврат возможен до 25 апреля 2026 включительно. После этой даты — только обмен билета на другого участника. Напишите нам в Telegram для оформления.</div></div>
     </div>
   </div>
 
@@ -1857,7 +2398,7 @@ body {
 <section class="ev-final">
   <div class="ev-final-orb"></div>
 <div class="container">
-  <h2>Если тебе важно понимать, куда движется рынок — встречаемся <em>25 апреля</em></h2>
+  <h2>Если тебе важно понимать, куда движется рынок — встречаемся <em>2 мая</em></h2>
   <p>БИЗНЕС VILLAGE. WEB3 AI TALK — это живая деловая среда, где можно спросить, понять, разобрать и унести реальную пользу в работу и бизнес.</p>
   <div class="ev-final-btns">
     <a href="#tickets" class="btn btn-primary">Купить билет →</a>
@@ -1878,7 +2419,7 @@ body {
     <li><a href="#faq">FAQ</a></li>
     <li><a href="#" style="color:var(--muted2);font-size:12px;">Партнёрам</a></li>
   </ul>
-  <div class="footer-copy">WEB3 AI VILLAGE · 25 апреля 2026 · Минск</div>
+  <div class="footer-copy">WEB3 AI VILLAGE · 2 мая 2026 · Минск</div>
 </div>
 </footer>
 
@@ -1894,6 +2435,40 @@ function faqToggle(btn) {
   if (!open) {
     item.classList.add('open');
     body.style.maxHeight = body.scrollHeight + 'px';
+  }
+}
+
+function progMoreToggle() {
+  const more = document.getElementById('prog-more');
+  const btn = document.getElementById('prog-toggle-btn');
+  const isOpen = more.classList.contains('open');
+  if (isOpen) {
+    more.classList.remove('open');
+    btn.classList.remove('open');
+    btn.textContent = 'Подробнее о программе ↓';
+  } else {
+    more.classList.add('open');
+    btn.classList.add('open');
+    btn.textContent = 'Свернуть ↑';
+  }
+}
+
+function progToggle(el) {
+  el.classList.toggle('open');
+}
+
+function tlToggle() {
+  const more = document.getElementById('tl-more');
+  const btn = document.getElementById('tl-toggle');
+  const isOpen = more.classList.contains('open');
+  if (isOpen) {
+    more.classList.remove('open');
+    btn.classList.remove('open');
+    btn.textContent = 'Показать всю программу ↓';
+  } else {
+    more.classList.add('open');
+    btn.classList.add('open');
+    btn.textContent = 'Свернуть ↑';
   }
 }
 </script>
