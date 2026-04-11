@@ -15,10 +15,10 @@
 ══════════════════════════════════════ */
 
 .ev-page {
-  --bg:          #F7F8F5;
-  --surface:     #EEEEE9;  
+  --bg:          #E2E4DC;
+  --surface:     #D4D6CC;  
   --card:        #FFFFFF;
-  --card2:       #F0F1EC;
+  --card2:       #DCDEDD;
   --border:      rgba(0,0,0,0.08);
   --border2:     rgba(0,0,0,0.14);
   --green:       #6A8C2A;
@@ -35,13 +35,13 @@
 }
 
 body {
-  background: #F7F8F5;
+  background: #E2E4DC;
   color: #1A1E14;
   font-family: 'Inter', sans-serif;
 }
 
 .nav {
-  background: rgba(247,248,245,0.92);
+  background: rgba(226,228,220,0.92);
   border-bottom: 1px solid rgba(0,0,0,0.08);
 }
 .nav-logo { color: #1A1E14; }
@@ -55,9 +55,9 @@ body {
 
 .divider { background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent); }
 
-.section { background: #F7F8F5; }
+.section { background: #E2E4DC; }
 .section--dark {
-  background: #EEEEE9;
+  background: #D4D6CC;
   border-top: 1px solid rgba(0,0,0,0.07);
   border-bottom: 1px solid rgba(0,0,0,0.07);
 }
@@ -89,7 +89,7 @@ body {
 .btn-ghost:hover { border-color: #97BC53; color: #6A8C2A; }
 
 .footer {
-  background: #EEEEE9;
+  background: #D4D6CC;
   border-top: 1px solid rgba(0,0,0,0.08);
 }
 .footer-brand { color: #1A1E14; }
@@ -100,7 +100,7 @@ body {
 .faq-item { background: #FFFFFF; border-color: rgba(0,0,0,0.08); }
 .faq-q { color: #1A1E14; }
 .faq-q:hover { color: #6A8C2A; }
-.faq-icon { background: #F0F1EC; border-color: rgba(0,0,0,0.12); color: #6A8C2A; }
+.faq-icon { background: #DCDEDD; border-color: rgba(0,0,0,0.12); color: #6A8C2A; }
 .faq-item.open .faq-icon { background: rgba(151,188,83,0.15); }
 .faq-body-inner { color: rgba(26,30,20,0.6); }
 
@@ -134,7 +134,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-  background: #F7F8F5;
+  background: #E2E4DC;
 }
 .ev-hero .container {
   display: flex;
@@ -320,7 +320,7 @@ body {
 /* ══════════════════════
    CONCEPT
 ══════════════════════ */
-.concept-section { background: #EEEEE9; }
+.concept-section { background: #D4D6CC; }
 
 .concept-grid {
   display: grid;
@@ -475,7 +475,7 @@ body {
 .ev-fw-note {
   margin-top: 24px;
   font-size: 15px; color: var(--muted);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ══════════════════════════════════════
@@ -661,66 +661,68 @@ body {
    DIGITAL ECO BLOCK
 ══════════════════════ */
 .digital-section {
-  background: linear-gradient(135deg, #E8EFD8, #F0F4E6);
+  background: linear-gradient(135deg, #D8E0C8, #DDE5CC);
   border-top: 1px solid rgba(151,188,83,0.3);
   border-bottom: 1px solid rgba(151,188,83,0.3);
 }
-.digital-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 64px;
-  align-items: center;
+.digital-callout-big {
+  font-family: 'Inter', sans-serif;
+  font-size: clamp(36px, 6vw, 72px);
+  font-weight: 900;
+  color: #4A6318;
+  letter-spacing: -0.04em;
+  line-height: 1.0;
+  margin-bottom: 24px;
+  display: block;
 }
-.digital-text .s-title { color: #1A1E14; }
-.digital-text p {
-  font-size: 16px; color: rgba(26,30,20,0.6); line-height: 1.8; margin-bottom: 16px;
+.digital-lead {
+  font-size: 17px;
+  color: rgba(26,30,20,0.7);
+  line-height: 1.75;
+  max-width: 640px;
+  margin-bottom: 32px;
+}
+.digital-li-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1A1E14;
+  margin-bottom: 14px;
 }
 .digital-list {
-  display: flex; flex-direction: column; gap: 10px;
-  margin: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 520px;
 }
 .digital-li {
-  display: flex; align-items: flex-start; gap: 10px;
-  font-size: 14px; color: rgba(26,30,20,0.65);
-  word-break: break-word;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 15px;
+  color: rgba(26,30,20,0.75);
 }
 .digital-li::before {
   content: '→';
-  color: var(--green); font-weight: 700; flex-shrink: 0;
+  color: #6A8C2A;
+  font-weight: 700;
+  flex-shrink: 0;
 }
-.digital-note {
-  padding: 20px 22px;
-  background: rgba(151,188,83,0.12);
-  border: 1px solid rgba(151,188,83,0.3);
-  border-radius: 12px;
-  font-size: 14px; color: rgba(26,30,20,0.75);
-  line-height: 1.7; margin-top: 24px;
-}
-.digital-callout {
-  padding: 36px 32px;
-  background: rgba(151,188,83,0.08);
-  border: 1px solid rgba(151,188,83,0.3);
-  border-radius: 20px;
-}
-.digital-callout-big {
-  font-family: 'Inter', sans-serif;
-  font-size: clamp(28px, 6vw, 52px); font-weight: 900;
-  color: #6A8C2A; letter-spacing: -0.04em;
-  line-height: 1.05; margin-bottom: 6px;
-  display: block;
-  word-break: break-word;
-}
-.digital-callout p { font-size: 15px; color: rgba(26,30,20,0.6); line-height: 1.65; margin-top: 14px; }
 
 /* ══════════════════════
    FORMAT ADVANTAGE
 ══════════════════════ */
 .adv-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
   align-items: start;
-  margin-top: 52px;
+  margin-top: 36px;
+}
+.adv-col.us .adv-item {
+  color: rgba(26,30,20,0.85);
+  font-weight: 600;
+  font-size: 15px;
 }
 .adv-col {
   padding: 32px 28px;
@@ -861,45 +863,68 @@ body {
 .location-note {
   margin-top: 14px;
   font-size: 14px; color: var(--muted);
-  font-style: italic;
+  font-style: normal;
 }
 
 /* ══════════════════════
    TICKETS
 ══════════════════════ */
-.tickets-section { background: #EEEEE9; }
+.tickets-section { background: #D4D6CC; }
 .tickets-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
   margin-top: 52px;
   align-items: start;
 }
+.ticket-card.standard {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(0,0,0,0.1) !important;
+  box-shadow: none !important;
+}
+.ticket-card.business {
+  background: rgba(151,188,83,0.22);
+  border: 1px solid rgba(151,188,83,0.6);
+  box-shadow: 0 8px 40px rgba(151,188,83,0.25);
+}
+.ticket-card.business .ticket-name { color: #4A6318; }
 .ticket-card {
   padding: 36px 30px;
   border-radius: 20px;
   position: relative;
 }
 .ticket-card.standard {
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.1);
-}
-.ticket-card.vip {
   background: rgba(151,188,83,0.08);
   border: 1px solid rgba(151,188,83,0.4);
-  box-shadow: 0 8px 40px rgba(151,188,83,0.2);
+  box-shadow: 0 8px 40px rgba(151,188,83,0.15);
 }
+.ticket-card.vip {
+  background: #1A1E14;
+  border: 1px solid #1A1E14;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+}
+.ticket-card.vip .ticket-name { color: #FFFFFF; }
+.ticket-card.vip .ticket-price { color: #97BC53; }
+.ticket-card.vip .ticket-tier { color: rgba(255,255,255,0.45); }
+.ticket-card.vip .ticket-features li { color: rgba(255,255,255,0.75); border-bottom-color: rgba(255,255,255,0.08); }
+.ticket-card.vip .ticket-features li::before { color: #97BC53; }
 .ticket-badge {
   position: absolute;
   top: -12px; left: 50%;
   transform: translateX(-50%);
-  background: var(--green);
-  color: #060A0D;
   font-family: 'Inter', sans-serif;
   font-size: 10px; font-weight: 800;
   letter-spacing: 0.12em; text-transform: uppercase;
   padding: 5px 18px; border-radius: 100px;
   white-space: nowrap;
+}
+.ticket-badge--green {
+  background: #97BC53;
+  color: #1A1E14;
+}
+.ticket-badge--dark {
+  background: #FFFFFF;
+  color: #1A1E14;
 }
 .ticket-tier {
   font-size: 11px; font-weight: 700;
@@ -932,6 +957,16 @@ body {
 }
 .ticket-features li:last-child { border-bottom: none; }
 .ticket-features li::before { content: '✓'; color: #6A8C2A; font-weight: 700; flex-shrink: 0; }
+.ticket-seats {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 12px;
+  color: rgba(26,30,20,0.45);
+}
+.ticket-seats strong { color: #6A8C2A; }
+.ticket-seats--light { color: rgba(255,255,255,0.4); }
+.ticket-seats--light strong { color: #97BC53; }
+
 .tickets-note {
   margin-top: 16px;
   text-align: center;
@@ -941,7 +976,7 @@ body {
 /* ══════════════════════
    REGISTRATION FORM
 ══════════════════════ */
-.reg-section { background: #F7F8F5; }
+.reg-section { background: #E2E4DC; }
 .reg-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -1251,6 +1286,46 @@ body {
   color: rgba(26,30,20,0.4);
   margin-bottom: 14px;
 }
+/* Новый знак белорусского рубля — Б с чертой */
+.byn-sign {
+  display: inline-block;
+  position: relative;
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  line-height: 1;
+}
+.byn-sign::after {
+  content: '';
+  position: absolute;
+  left: 52%;
+  top: 38%;
+  width: 58%;
+  height: 8%;
+  background: currentColor;
+  border-radius: 1px;
+}
+
+/* Блок "День вне суеты" */
+.day-note {
+  margin-top: 20px;
+  padding: 24px 28px;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.08);
+  border-radius: 14px;
+}
+.day-note-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #1A1E14;
+  margin-bottom: 8px;
+}
+.day-note-text {
+  font-size: 14px;
+  color: rgba(26,30,20,0.55);
+  line-height: 1.7;
+}
+
 /* Хедлайнеры */
 .headliners {
   display: grid;
@@ -1358,6 +1433,44 @@ body {
 .tl-toggle-btn:hover { color: #4A6318; }
 .tl-toggle-btn.open { color: #4A6318; }
 
+/* Инфопартнёры */
+.partners-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 40px;
+  align-items: center;
+}
+.partner-logo {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid rgba(0,0,0,0.1);
+  flex-shrink: 0;
+}
+.partner-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Знак белорусского рубля (новый, с 04.02.2026) */
+.byr-sign {
+  display: inline-flex;
+  align-items: center;
+  vertical-align: middle;
+}
+.byr-icon {
+  width: 0.65em;
+  height: 0.8em;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -0.05em;
+}
+
 /* Специальные блоки в topics */
 .topic-special {
   background: rgba(151,188,83,0.07) !important;
@@ -1455,9 +1568,10 @@ body {
    RESPONSIVE
 ══════════════════════ */
 @media (max-width: 900px) {
-  .concept-grid, .digital-inner, .adv-grid,
+  .concept-grid, .digital-inner,
   .location-grid, .tickets-grid, .reg-inner,
   .org-grid { grid-template-columns: 1fr; gap: 28px; }
+  .adv-grid { grid-template-columns: 1fr; }
   .topics-grid { grid-template-columns: 1fr; grid-auto-rows: auto; }
   .topics-grid .topic-card:first-child { grid-column: auto; }
   .why-grid { grid-template-columns: 1fr 1fr; }
@@ -1510,9 +1624,9 @@ body {
     <li><a href="#topics">Программа</a></li>
     <li><a href="#tickets">Билеты</a></li>
     <li><a href="#faq">FAQ</a></li>
-    <li><a href="#tickets" class="nav-pill">Купить билет →</a></li>
+    <li><a href="#tickets" class="nav-pill">Оставить заявку →</a></li>
   </ul>
-  <a href="#tickets" class="nav-pill nav-pill-mobile">Купить билет</a>
+  <a href="#tickets" class="nav-pill nav-pill-mobile">Оставить заявку</a>
 </div>
 </nav>
 
@@ -1546,11 +1660,11 @@ body {
   </div>
 
   <div class="ev-hero-btns">
-    <a href="#tickets" class="btn btn-primary">Купить билет</a>
+    <a href="#tickets" class="btn btn-primary">Оставить заявку</a>
     <a href="#topics" class="btn btn-ghost">Смотреть программу</a>
   </div>
 
-  <div class="ev-hero-meta">
+  <div class="ev-hero-meta" style="margin-top: 32px;">
     <div class="ev-meta-tag accent">📅 2 мая 2026</div>
     <div class="ev-meta-tag">📍 Комарово Village · 4 км от Минска</div>
     <div class="ev-meta-tag">⏱ 11:00 — 03:00</div>
@@ -1585,18 +1699,18 @@ body {
       <p>Не как хайп и «монетки ради монеток», а как реальные инструменты новой экономики — гибкость, переводы, расчёты, новые модели взаимодействия и понимание того, куда движется рынок.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar">СХ</div>
+          <div class="topic-avatar"><img src="khitrov1.png" alt="Сергей Хитров"></div>
           <div class="topic-speaker-info">
             <div class="topic-speaker-name">Сергей Хитров</div>
-            <div class="topic-speaker-role">Основатель Blockchain Life</div>
+            <div class="topic-speaker-role">Основатель форума Blockchain Life</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 2</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Иван Жизневский</div>
+            <div class="topic-speaker-role">НацБанк, зам. нач. ПВТ</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
@@ -1608,18 +1722,18 @@ body {
       <p>Как ускорять процессы, снижать ручной труд, усиливать команды и внедрять AI с практической пользой — без переплаты и лишнего риска.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 1</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Андрей Тепляков</div>
+            <div class="topic-speaker-role">W3B-Ai, PRO.UP</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="potolitsyna.jpg" alt="Татьяна Потолицына"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 2</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Татьяна Потолицына</div>
+            <div class="topic-speaker-role">Внедрение AI-моделей</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
@@ -1631,18 +1745,18 @@ body {
       <p>Что сегодня реально помогает бизнесу расти, усиливать продажи, маркетинг и управляемость в условиях нового рынка.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="malinina.jpg" alt="Света Малинина"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 1</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Света Малинина</div>
+            <div class="topic-speaker-role">Налоги, финансы</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 2</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Анна Алексеева</div>
+            <div class="topic-speaker-role">Основатель FinLab.by</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
@@ -1654,18 +1768,18 @@ body {
       <p>Как работать с новыми цифровыми инструментами аккуратно, легально и без лишних рисков в белорусском контексте.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 1</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Тамара Кулинкович</div>
+            <div class="topic-speaker-role">Основатель Skademy.by</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="dranitsa.jpg" alt="Максим Драница"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 2</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
+            <div class="topic-speaker-name">Максим Драница</div>
+            <div class="topic-speaker-role">Автоматизация бизнес-процессов с помощью AI</div>
             <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
           </div>
         </div>
@@ -1756,12 +1870,43 @@ body {
 <div class="divider"></div>
 
 <!-- ══════════════════════════
+     FOR WHOM
+══════════════════════════ -->
+<section class="section">
+<div class="container">
+  <span class="s-label">Для кого</span>
+  <h2 class="s-title">Кому это будет<br>особенно полезно</h2>
+
+  <div class="ev-fw-grid">
+    <div class="ev-fw-card card">
+      <h3>🏗️ Предприниматели и владельцы бизнеса</h3>
+      <p>Тем, кто ищет новые инструменты роста, гибкости, эффективности и развития в новой цифровой среде.</p>
+    </div>
+    <div class="ev-fw-card card">
+      <h3>📊 Маркетологи, growth и операционные</h3>
+      <p>Тем, кто отвечает за результат, процессы, воронки, внедрение и адаптацию к новому рынку.</p>
+    </div>
+    <div class="ev-fw-card card">
+      <h3>⚙️ AI, Web3 и digital-практики</h3>
+      <p>Тем, кто хочет видеть не только технологию, но и её прикладную ценность для бизнеса.</p>
+    </div>
+    <div class="ev-fw-card card">
+      <h3>🚀 Стартапы, основатели, инвесторы</h3>
+      <p>Тем, кто ищет новые модели, связи, гипотезы и точки роста в цифровой экономике.</p>
+    </div>
+  </div>
+  <p class="ev-fw-note">Если тебе важно не отстать от рынка, а понимать, как использовать новые инструменты себе в плюс — тебе сюда.</p>
+
+</div>
+</section>
+
+<!-- ══════════════════════════
      WHY BE HERE
 ══════════════════════════ -->
 <section class="section section--dark">
 <div class="container">
   <span class="s-label">Почему стоит быть здесь</span>
-  <h2 class="s-title">Конкретная польза<br>для тебя</h2>
+  <h2 class="s-title">Что ты унесёшь<br>с собой</h2>
 
   <div class="why-grid">
     <div class="why-card card">
@@ -1827,62 +1972,21 @@ body {
 </section>
 
 <!-- ══════════════════════════
-     FOR WHOM
-══════════════════════════ -->
-<section class="section">
-<div class="container">
-  <span class="s-label">Для кого</span>
-  <h2 class="s-title">Кому это будет<br>особенно полезно</h2>
-
-  <div class="ev-fw-grid">
-    <div class="ev-fw-card card">
-      <h3>🏗️ Предприниматели и владельцы бизнеса</h3>
-      <p>Тем, кто ищет новые инструменты роста, гибкости, эффективности и развития в новой цифровой среде.</p>
-    </div>
-    <div class="ev-fw-card card">
-      <h3>📊 Маркетологи, growth и операционные</h3>
-      <p>Тем, кто отвечает за результат, процессы, воронки, внедрение и адаптацию к новому рынку.</p>
-    </div>
-    <div class="ev-fw-card card">
-      <h3>⚙️ AI, Web3 и digital-практики</h3>
-      <p>Тем, кто хочет видеть не только технологию, но и её прикладную ценность для бизнеса.</p>
-    </div>
-    <div class="ev-fw-card card">
-      <h3>🚀 Стартапы, основатели, инвесторы</h3>
-      <p>Тем, кто ищет новые модели, связи, гипотезы и точки роста в цифровой экономике.</p>
-    </div>
-  </div>
-  <p class="ev-fw-note">Если тебе важно не отстать от рынка, а понимать, как использовать новые инструменты себе в плюс — тебе сюда.</p>
-
-</div>
-</section>
-
-<!-- ══════════════════════════
      DIGITAL ECO BLOCK
 ══════════════════════════ -->
 <section class="section digital-section">
 <div class="container">
-  <div class="digital-inner">
-    <div class="digital-text">
-      <span class="s-label">Цифровая экономика</span>
-      <h2 class="s-title">Без шума<br>и иллюзий</h2>
-      <p>Мы говорим о Web3, крипте и цифровых валютах не как о модной тусовке и не как о сказке про быстрые деньги.</p>
-      <p>Мы говорим о них как о реальных инструментах:</p>
-      <div class="digital-list">
-        <div class="digital-li">для понимания новой экономики</div>
-        <div class="digital-li">для гибкости в расчётах и переводах</div>
-        <div class="digital-li">для новых моделей взаимодействия</div>
-        <div class="digital-li">для ориентации в том, как меняется рынок</div>
-        <div class="digital-li">для понимания рисков и возможностей</div>
-      </div>
-      <div class="digital-note">
-        Без «успешного успеха». Без сказок про Lamborghini за неделю. С пользой, здравым смыслом и практическим взглядом.
-      </div>
-    </div>
-    <div class="digital-callout">
-      <span class="digital-callout-big">Почему<br>нельзя<br>игнорировать</span>
-      <p>Понять, что это такое. Где реально полезно. Какие есть риски. И как это уже влияет на бизнес прямо сейчас — в Беларуси и в мире.</p>
-    </div>
+
+  <div class="digital-callout-big">Почему<br>нельзя<br>игнорировать</div>
+  <p class="digital-lead">Мы говорим о Web3, крипте и цифровых валютах не как о модной тусовке и не как о сказке про быстрые деньги.</p>
+
+  <div class="digital-list">
+    <div class="digital-li-label">Мы говорим о них как о реальных инструментах:</div>
+    <div class="digital-li">для понимания новой экономики</div>
+    <div class="digital-li">для гибкости в расчётах и переводах</div>
+    <div class="digital-li">для новых моделей взаимодействия</div>
+    <div class="digital-li">для ориентации в том, как меняется рынок</div>
+    <div class="digital-li">для понимания рисков и возможностей</div>
   </div>
 
 </div>
@@ -1894,26 +1998,47 @@ body {
 <section class="section">
 <div class="container">
   <span class="s-label">Не просто конференция</span>
-  <h2 class="s-title">Почему формат<br>работает иначе</h2>
 
   <div class="adv-grid">
+
+    <!-- Обычный формат (1 колонка) -->
     <div class="adv-col them">
       <h3>Обычный формат</h3>
+      <div class="adv-item">Локация — конференц-зал</div>
       <div class="adv-item">Спикер выступил и ушёл</div>
       <div class="adv-item">Один взгляд на тему</div>
       <div class="adv-item">Вопросы — если останется время</div>
       <div class="adv-item">Контент без обратной связи</div>
       <div class="adv-item">Зал — пассивный зритель</div>
+      <div class="adv-item">Городской отель или бизнес-центр</div>
+      <div class="adv-item">Закрытые помещения без воздуха</div>
+      <div class="adv-item">Нетворкинг в коридоре</div>
+      <div class="adv-item">Уехал — забыл</div>
     </div>
+
+    <!-- Отличие 1: Локация -->
     <div class="adv-col us">
-      <div class="adv-badge">Наш формат</div>
-      <h3>WEB3 AI VILLAGE</h3>
+      <div class="adv-badge">Отличие 1</div>
+      <h3>Выездной формат, который работает иначе</h3>
+      <div class="adv-item">Природа · воздух · пространство для общения</div>
+      <div class="adv-item">Закрытая площадка в 4 км от Минска</div>
+      <div class="adv-item">Шатёр с оборудованной сценой и зоной Q&A</div>
+      <div class="adv-item">Организованный трансфер туда и обратно</div>
+      <div class="adv-item">Кейтеринг и кофе-брейки включены</div>
+      <div class="adv-item">Партнёрская зона и нетворкинг-пространство</div>
+    </div>
+
+    <!-- Отличие 2: Формат -->
+    <div class="adv-col us">
+      <div class="adv-badge">Отличие 2</div>
+      <h3>Наш формат</h3>
       <div class="adv-item">2 эксперта в каждой теме</div>
       <div class="adv-item">2 взгляда на один вопрос</div>
       <div class="adv-item">60 минут Q&A в каждом блоке</div>
       <div class="adv-item">Разбор твоих реальных кейсов</div>
       <div class="adv-item">Зал — полноправный участник</div>
     </div>
+
   </div>
 
 </div>
@@ -1934,22 +2059,22 @@ body {
     <div class="headliners-label">Хедлайнеры</div>
     <div class="headliners">
     <div class="headliner-card">
-      <div class="headliner-photo">СХ</div>
+      <div class="headliner-photo"><img src="khitrov1.png" alt="Сергей Хитров"></div>
       <div class="headliner-name">Сергей Хитров</div>
-      <div class="headliner-role">Основатель Blockchain Life</div>
+      <div class="headliner-role">Основатель форума Blockchain Life</div>
       <div class="headliner-desc">Один из ведущих организаторов крипто-конференций в СНГ, эксперт по Web3 и блокчейн-индустрии</div>
     </div>
     <div class="headliner-card">
-      <div class="headliner-photo">—</div>
-      <div class="headliner-name">Спикер 2</div>
-      <div class="headliner-role">Будет объявлен</div>
-      <div class="headliner-desc">Описание спикера появится после подтверждения участия</div>
+      <div class="headliner-photo"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
+      <div class="headliner-name">Иван Жизневский</div>
+      <div class="headliner-role">НацБанк, зам. нач. ПВТ</div>
+      <div class="headliner-desc">Эксперт по регуляторике цифровой экономики и государственной политике в сфере финтех</div>
     </div>
     <div class="headliner-card">
-      <div class="headliner-photo">—</div>
-      <div class="headliner-name">Спикер 3</div>
-      <div class="headliner-role">Будет объявлен</div>
-      <div class="headliner-desc">Описание спикера появится после подтверждения участия</div>
+      <div class="headliner-photo"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
+      <div class="headliner-name">Тамара Кулинкович</div>
+      <div class="headliner-role">Основатель Skademy.by</div>
+      <div class="headliner-desc">Предприниматель, эксперт по образованию и развитию бизнеса в цифровой среде</div>
     </div>
   </div><!-- /headliners -->
   </div><!-- /headliners-wrap -->
@@ -1988,17 +2113,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar">СХ</div>
+            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров"></div>
             <div>
               <div class="prog-spk-name">Сергей Хитров</div>
-              <div class="prog-spk-role">Основатель Blockchain Life</div>
+              <div class="prog-spk-role">Основатель форума Blockchain Life</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
             <div>
-              <div class="prog-spk-name">Спикер 2</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Иван Жизневский</div>
+              <div class="prog-spk-role">НацБанк, зам. нач. ПВТ</div>
             </div>
           </div>
         </div>
@@ -2016,17 +2141,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
             <div>
-              <div class="prog-spk-name">Спикер 1</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Андрей Тепляков</div>
+              <div class="prog-spk-role">W3B-Ai, PRO.UP</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="potolitsyna.jpg" alt="Татьяна Потолицына"></div>
             <div>
-              <div class="prog-spk-name">Спикер 2</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Татьяна Потолицына</div>
+              <div class="prog-spk-role">Внедрение AI-моделей</div>
             </div>
           </div>
         </div>
@@ -2044,17 +2169,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
             <div>
-              <div class="prog-spk-name">Спикер 1</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Андрей Тепляков</div>
+              <div class="prog-spk-role">Модератор разборов</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров"></div>
             <div>
-              <div class="prog-spk-name">Спикер 2</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Сергей Хитров</div>
+              <div class="prog-spk-role">Эксперт разборов</div>
             </div>
           </div>
         </div>
@@ -2072,17 +2197,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="malinina.jpg" alt="Света Малинина"></div>
             <div>
-              <div class="prog-spk-name">Спикер 1</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Света Малинина</div>
+              <div class="prog-spk-role">Налоги, финансы</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
             <div>
-              <div class="prog-spk-name">Спикер 2</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Анна Алексеева</div>
+              <div class="prog-spk-role">Основатель FinLab.by</div>
             </div>
           </div>
         </div>
@@ -2100,17 +2225,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
             <div>
-              <div class="prog-spk-name">Спикер 1</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Тамара Кулинкович</div>
+              <div class="prog-spk-role">Основатель Skademy.by</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar">—</div>
+            <div class="prog-avatar"><img src="dranitsa.jpg" alt="Максим Драница"></div>
             <div>
-              <div class="prog-spk-name">Спикер 2</div>
-              <div class="prog-spk-role">Будет объявлен</div>
+              <div class="prog-spk-name">Максим Драница</div>
+              <div class="prog-spk-role">Автоматизация с AI</div>
             </div>
           </div>
         </div>
@@ -2151,54 +2276,35 @@ body {
     Подробнее о программе ↓
   </button>
 
+  <div class="day-note">
+    <div class="day-note-title">Это день вне городской суеты</div>
+    <div class="day-note-text">С максимальной пользой для бизнеса, роста и новых связей. Вы не просто приходите послушать — вы приходите стать частью среды.</div>
+  </div>
+
 </div>
 </section>
 
 <!-- ══════════════════════════
-     LOCATION
+     ORGANIZERS
 ══════════════════════════ -->
-<section class="section">
+<section class="section section--dark">
 <div class="container">
-  <span class="s-label">Локация и атмосфера</span>
-  <h2 class="s-title">Выездной формат,<br>который работает иначе</h2>
+  <span class="s-label">Кто организует</span>
+  <h2 class="s-title">За событием стоят</h2>
 
-  <div class="location-grid">
-    <div class="location-card card">
-      <h3>📍 Комарово Village</h3>
-      <div class="location-items">
-        <div class="location-item">
-          <div class="location-icon">🌲</div>
-          Закрытая площадка в 4 км от Минска
-        </div>
-        <div class="location-item">
-          <div class="location-icon">⛺</div>
-          Шатёр с оборудованной сценой и зоной Q&A
-        </div>
-        <div class="location-item">
-          <div class="location-icon">🚌</div>
-          Организованный трансфер туда и обратно
-        </div>
-        <div class="location-item">
-          <div class="location-icon">🍽️</div>
-          Кейтеринг и кофе-брейки включены
-        </div>
-        <div class="location-item">
-          <div class="location-icon">🌿</div>
-          Природа · воздух · пространство для общения
-        </div>
-        <div class="location-item">
-          <div class="location-icon">🤝</div>
-          Партнёрская зона и нетворкинг-пространство
-        </div>
+  <div class="org-grid">
+    <div class="org-card card">
+      <div class="org-logo"><img src="Logo_W3B_Ai.png" alt="W3B•AI" style="width:100%;height:100%;object-fit:contain;border-radius:8px;"></div>
+      <div>
+        <div class="org-name">Web3 AI Community Беларусь</div>
+        <div class="org-desc">Сообщество о практическом применении Web3, AI и новых цифровых инструментов для бизнеса, нетворкинга и развития. Организуем ивенты, разборы и экспертные сессии с 2022 года.</div>
       </div>
     </div>
-    <div>
-      <div class="location-vibe">
-        Пространство, где можно не просто слушать, а спокойно знакомиться, обсуждать, задавать вопросы и быть внутри живой деловой среды — вдали от городской суеты.
-      </div>
-      <div class="location-note" style="margin-top: 20px; padding: 20px; background: var(--card); border: 1px solid var(--border); border-radius: 12px; font-style: normal;">
-        <strong style="display: block; margin-bottom: 8px; font-family: 'Inter', sans-serif; font-size: 14px;">Это день вне городской суеты</strong>
-        <span style="font-size: 13px; color: var(--muted);">С максимальной пользой для бизнеса, роста и новых связей. Вы не просто приходите послушать — вы приходите стать частью среды.</span>
+    <div class="org-card card">
+      <div class="org-logo">📈</div>
+      <div>
+        <div class="org-name">PRO.UP / Marketing ProApp</div>
+        <div class="org-desc">Маркетинговые и growth-решения, системный подход к росту, продажам, упаковке и внедрению работающих инструментов для бизнеса в Беларуси и регионе.</div>
       </div>
     </div>
   </div>
@@ -2215,41 +2321,63 @@ body {
 <div class="container">
   <span class="s-label">Билеты</span>
   <h2 class="s-title">Выбери формат участия</h2>
-  <p class="s-sub">Два варианта — основная программа или полный день с afterparty.</p>
+  <p class="s-sub">Три варианта — выбери подходящий.</p>
 
   <div class="tickets-grid">
+
+    <!-- Стандарт -->
     <div class="ticket-card standard">
       <div class="ticket-tier">Базовый</div>
-      <div class="ticket-name">Standard</div>
-      <div class="ticket-price">170 <span style="font-size:24px;color:var(--muted)">BYN</span></div>
+      <div class="ticket-name">Стандарт</div>
+      <div class="ticket-price">80 <span style="font-size:24px;color:var(--muted)"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
       <ul class="ticket-features">
         <li>Трансфер из Минска и обратно</li>
         <li>Вся основная программа 11:00–20:00</li>
-        <li>5 тематических блоков с экспертами</li>
+        <li>4 тематических блока с экспертами</li>
         <li>Живые Q&A сессии с залом</li>
         <li>Разборы проектов участников</li>
         <li>Нетворкинг в течение дня</li>
         <li>Кофе-брейки и кейтеринг</li>
         <li>Партнёрская зона</li>
       </ul>
-      <a href="#reg" class="btn btn-ghost" style="width:100%;justify-content:center;">Купить Standard</a>
+      <a href="#reg" class="btn btn-ghost" style="width:100%;justify-content:center;">Купить Стандарт</a>
+      <div class="ticket-seats">🎟 Всего мест: <strong>50</strong></div>
     </div>
 
-    <div class="ticket-card vip">
-      <div class="ticket-badge">⭐ Рекомендуем</div>
-      <div class="ticket-tier">Полный день</div>
-      <div class="ticket-name">VIP</div>
-      <div class="ticket-price">450 <span style="font-size:24px;color:rgba(0,232,122,0.6)">BYN</span></div>
+    <!-- Бизнес -->
+    <div class="ticket-card business">
+      <div class="ticket-badge ticket-badge--green">⭐ Рекомендуем</div>
+      <div class="ticket-tier">Продвинутый</div>
+      <div class="ticket-name">Бизнес</div>
+      <div class="ticket-price">170 <span style="font-size:24px;color:var(--muted)"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
       <ul class="ticket-features">
-        <li>Всё из Standard</li>
+        <li>Всё из Стандарта</li>
+        <li>Размещение в первых рядах после VIP</li>
+        <li>Приоритетный вход без очереди</li>
+        <li>Отдельная нетворкинг-зона</li>
+      </ul>
+      <a href="#reg" class="btn btn-ghost" style="width:100%;justify-content:center;">Купить Бизнес</a>
+      <div class="ticket-seats">🎟 Всего мест: <strong>30</strong></div>
+    </div>
+
+    <!-- VIP -->
+    <div class="ticket-card vip">
+      <div class="ticket-badge ticket-badge--dark">👑 Доминируй</div>
+      <div class="ticket-tier">Максимум</div>
+      <div class="ticket-name">VIP</div>
+      <div class="ticket-price">450 <span style="font-size:24px;color:rgba(151,188,83,0.6)"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <ul class="ticket-features">
+        <li>Всё из Бизнеса</li>
+        <li>Размещение в первых рядах</li>
         <li>VIP afterparty 22:00 – 03:00</li>
         <li>Шашлык-пати и кавер-бенд</li>
-        <li>Тесный нетворкинг в формате вечеринки</li>
-        <li>Прямой контакт со спикерами вечером</li>
-        <li>Общение с партнёрами и гостями</li>
+        <li>Тесный нетворкинг со спикерами</li>
+        <li>Прямой контакт с партнёрами вечером</li>
       </ul>
       <a href="#reg" class="btn btn-primary" style="width:100%;justify-content:center;">Купить VIP</a>
+      <div class="ticket-seats ticket-seats--light">🎟 Всего мест: <strong>15</strong></div>
     </div>
+
   </div>
 
   <p class="tickets-note">⚡ Количество мест ограничено. Ранняя регистрация — лучшие места и нетворкинг.</p>
@@ -2279,8 +2407,8 @@ body {
           <input type="tel" class="form-input" placeholder="+375 XX XXX XX XX">
         </div>
         <div class="form-group">
-          <label class="form-label">Email</label>
-          <input type="email" class="form-input" placeholder="your@email.com">
+          <label class="form-label">Telegram</label>
+          <input type="text" class="form-input" placeholder="@username">
         </div>
       </div>
       <div class="form-row">
@@ -2288,8 +2416,9 @@ body {
           <label class="form-label">Тип билета</label>
           <select class="form-select">
             <option value="">Выберите</option>
-            <option value="standard">Standard — 170 BYN</option>
-            <option value="vip">VIP — 450 BYN</option>
+            <option value="standard">Стандарт — 80 р.</option>
+            <option value="business">Бизнес — 170 р.</option>
+            <option value="vip">VIP — 450 р.</option>
           </select>
         </div>
         <div class="form-group">
@@ -2302,43 +2431,40 @@ body {
           </select>
         </div>
       </div>
-      <button class="form-submit">Оплатить участие →</button>
-      <p class="form-note">После оплаты вы получите подтверждение на email с деталями события и инструкцией по трансферу</p>
+      <button class="form-submit">Оставить заявку →</button>
+      <p class="form-note">После оформления заявки с вами свяжется руководитель проекта</p>
     </div>
+  </div>
+
+</div>
+</section>
+
+<!-- ══════════════════════════
+     INFO PARTNERS
+══════════════════════════ -->
+<section class="section section--dark">
+<div class="container">
+  <span class="s-label">Медиаподдержка</span>
+  <h2 class="s-title">Инфопартнёры</h2>
+
+  <div class="partners-grid">
+    <div class="partner-logo"><img src="partner-itonews2.jpg" alt="IToNews.pro"></div>
+    <div class="partner-logo"><img src="partner-altcoinbuy.jpg" alt="AltcoinBuy"></div>
+    <div class="partner-logo" style="background:#000"><img src="partner-finplay.jpg" alt="Партнёр"></div>
+    <div class="partner-logo"><img src="partner-itonews.jpg" alt="Партнёр"></div>
+    <div class="partner-logo" style="background:#000"><img src="partner-sharky.jpg" alt="Партнёр"></div>
+    <div class="partner-logo"><img src="partner-probiz.jpg" alt="Партнёр"></div>
+    <div class="partner-logo"><img src="partner-crypto.jpg" alt="Партнёр"></div>
+    <div class="partner-logo"><img src="partner-proapp.jpg" alt="Партнёр"></div>
+    <div class="partner-logo"><img src="partner-relax.jpg" alt="Партнёр"></div>
+    <div class="partner-logo" style="background:#000"><img src="partner-biznesmova.jpg" alt="Biznes.Mova"></div>
+    <div class="partner-logo" style="background:#5b0ea6"><img src="partner-sharky2.jpg" alt="Партнёр"></div>
   </div>
 
 </div>
 </section>
 
 <div class="divider"></div>
-
-<!-- ══════════════════════════
-     ORGANIZERS
-══════════════════════════ -->
-<section class="section section--dark">
-<div class="container">
-  <span class="s-label">Кто организует</span>
-  <h2 class="s-title">За событием стоят</h2>
-
-  <div class="org-grid">
-    <div class="org-card card">
-      <div class="org-logo"><img src="Logo_W3B_Ai.png" alt="W3B•AI" style="width:100%;height:100%;object-fit:contain;border-radius:8px;"></div>
-      <div>
-        <div class="org-name">Web3 AI Community Беларусь</div>
-        <div class="org-desc">Сообщество о практическом применении Web3, AI и новых цифровых инструментов для бизнеса, нетворкинга и развития. Организуем ивенты, разборы и экспертные сессии с 2022 года.</div>
-      </div>
-    </div>
-    <div class="org-card card">
-      <div class="org-logo">📈</div>
-      <div>
-        <div class="org-name">PRO.UP / Marketing ProApp</div>
-        <div class="org-desc">Маркетинговые и growth-решения, системный подход к росту, продажам, упаковке и внедрению работающих инструментов для бизнеса в Беларуси и регионе.</div>
-      </div>
-    </div>
-  </div>
-
-</div>
-</section>
 
 <!-- ══════════════════════════
      FAQ
@@ -2398,10 +2524,10 @@ body {
 <section class="ev-final">
   <div class="ev-final-orb"></div>
 <div class="container">
-  <h2>Если тебе важно понимать, куда движется рынок — встречаемся <em>2 мая</em></h2>
+  <h2>Если тебе важно понимать, куда движется рынок — встречаемся 2 мая</h2>
   <p>БИЗНЕС VILLAGE. WEB3 AI TALK — это живая деловая среда, где можно спросить, понять, разобрать и унести реальную пользу в работу и бизнес.</p>
   <div class="ev-final-btns">
-    <a href="#tickets" class="btn btn-primary">Купить билет →</a>
+    <a href="#tickets" class="btn btn-primary">Оставить заявку →</a>
     <a href="#topics" class="btn btn-ghost">Смотреть программу</a>
   </div>
 
