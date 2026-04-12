@@ -15,57 +15,64 @@
 ══════════════════════════════════════ */
 
 .ev-page {
-  --bg:          #E2E4DC;
-  --surface:     #D4D6CC;  
-  --card:        #FFFFFF;
-  --card2:       #DCDEDD;
-  --border:      rgba(0,0,0,0.08);
-  --border2:     rgba(0,0,0,0.14);
-  --green:       #6A8C2A;
+  --bg:          #262626;
+  --surface:     #222222;  
+  --card:        #2E2E2E;
+  --card2:       #333333;
+  --border:      rgba(255,255,255,0.07);
+  --border2:     rgba(255,255,255,0.1);
+  --green:       #97BC53;
   --green-dark:  #4A6318;
   --green-dim:   rgba(151,188,83,0.12);
   --green-line:  rgba(151,188,83,0.35);
   --green-glow:  rgba(151,188,83,0.3);
   --green-btn:   #97BC53;
-  --white:       #1A1E14;
-  --muted:       rgba(26,30,20,0.52);
-  --muted2:      rgba(26,30,20,0.28);
+  --white:       #FFFFFF;
+  --muted:       rgba(255,255,255,0.52);
+  --muted2:      rgba(255,255,255,0.28);
   --heading:     'Inter', sans-serif;
   --body:        'Inter', sans-serif;
 }
 
+/* Чередование фонов секций */
+.sec-light { background: #323232; }
+.sec-dark { background: #141414; }
+
+
+
 body {
-  background: #E2E4DC;
-  color: #1A1E14;
+  background: #1E1E1E;
+  color: #F0F0F0;
   font-family: 'Inter', sans-serif;
 }
 
 .nav {
-  background: rgba(226,228,220,0.92);
-  border-bottom: 1px solid rgba(0,0,0,0.08);
+  background: rgba(30,30,30,0.95);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
-.nav-logo { color: #1A1E14; }
-.nav-links a { color: rgba(26,30,20,0.55); }
-.nav-links a:hover { color: #1A1E14; }
+.nav-logo { color: #FFFFFF; }
+.nav-links a { color: rgba(255,255,255,0.6); }
+.nav-links a:hover { color: #FFFFFF; }
 .nav-pill {
   background: #97BC53;
-  color: #1A1E14 !important;
+  color: #F0F0F0 !important;
   box-shadow: 0 4px 16px rgba(151,188,83,0.35);
 }
 
 .divider { background: linear-gradient(90deg, transparent, rgba(0,0,0,0.1), transparent); }
 
-.section { background: #E2E4DC; }
+.section { background: transparent; }
+
 .section--dark {
-  background: #D4D6CC;
-  border-top: 1px solid rgba(0,0,0,0.07);
+  background: #2E2E2E;
+  border-top: 1px solid rgba(255,255,255,0.07);
   border-bottom: 1px solid rgba(0,0,0,0.07);
 }
 
 .card {
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.08);
-  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  background: #333333;
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 2px 20px rgba(0,0,0,0.4);
 }
 .card:hover {
   border-color: rgba(151,188,83,0.4);
@@ -73,36 +80,40 @@ body {
 }
 
 .s-label { color: #6A8C2A; }
-.s-title { color: #1A1E14; }
-.s-sub { color: rgba(26,30,20,0.55); }
+.s-title { color: #FFFFFF; }
+.s-sub {
+  color: rgba(255,255,255,0.6); }
 
 .btn-primary {
   background: #97BC53;
-  color: #1A1E14;
+  color: #F0F0F0;
   box-shadow: 0 4px 20px rgba(151,188,83,0.4);
 }
 .btn-primary:hover { box-shadow: 0 6px 28px rgba(151,188,83,0.55); }
 .btn-ghost {
-  color: #1A1E14;
-  border-color: rgba(0,0,0,0.18);
+  color: rgba(255,255,255,0.9);
+  border-
 }
-.btn-ghost:hover { border-color: #97BC53; color: #6A8C2A; }
+.btn-ghost:hover { border-color: #97BC53;  }
 
 .footer {
-  background: #D4D6CC;
+  background: #2E2E2E;
   border-top: 1px solid rgba(0,0,0,0.08);
 }
-.footer-brand { color: #1A1E14; }
-.footer-links a { color: rgba(26,30,20,0.5); }
+.footer-brand { color: rgba(255,255,255,0.7); }
+.footer-links a {
+  color: rgba(255,255,255,0.5); }
 .footer-links a:hover { color: #6A8C2A; }
-.footer-copy { color: rgba(26,30,20,0.35); }
+.footer-copy {
+  color: rgba(255,255,255,0.4); }
 
-.faq-item { background: #FFFFFF; border-color: rgba(0,0,0,0.08); }
-.faq-q { color: #1A1E14; }
+.faq-item { background: #333333; border-color: rgba(255,255,255,0.08); }
+.faq-q {
+  color: rgba(255,255,255,0.9); }
 .faq-q:hover { color: #6A8C2A; }
-.faq-icon { background: #DCDEDD; border-color: rgba(0,0,0,0.12); color: #6A8C2A; }
+.faq-icon { background: #2E2E2E; border-color: rgba(0,0,0,0.12);  }
 .faq-item.open .faq-icon { background: rgba(151,188,83,0.15); }
-.faq-body-inner { color: rgba(26,30,20,0.6); }
+.faq-body-inner { color: rgba(255,255,255,0.6); }
 
 .nav-pill-mobile { display: none; }
 @media (max-width: 768px) {
@@ -110,7 +121,7 @@ body {
     display: inline-flex;
     align-items: center;
     background: #97BC53;
-    color: #1A1E14 !important;
+    color: #F0F0F0!important;
     font-family: 'Inter', sans-serif;
     font-size: 12px !important;
     font-weight: 800 !important;
@@ -134,7 +145,7 @@ body {
   position: relative;
   overflow: hidden;
   text-align: center;
-  background: #E2E4DC;
+  background: #262626;
 }
 .ev-hero .container {
   display: flex;
@@ -161,6 +172,47 @@ body {
 }
 .ev-hero-grid { display: none; }
 
+.ev-hero-label {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #97BC53;
+  margin-bottom: 16px;
+  position: relative; z-index: 1;
+}
+.ev-hero-date-line {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.6);
+  margin: 12px 0 8px;
+  position: relative; z-index: 1;
+}
+.ev-hero-tagline {
+  font-size: 16px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 28px;
+  position: relative; z-index: 1;
+}
+.btn-hero-big {
+  font-size: 18px !important;
+  padding: 18px 40px !important;
+  border-radius: 14px !important;
+}
+.ev-hero-perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+  margin-bottom: 8px;
+  position: relative; z-index: 1;
+}
+.ev-perk {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+}
+
 .ev-hero-eyebrow {
   display: flex; align-items: center; gap: 12px;
   margin-bottom: 24px;
@@ -174,7 +226,7 @@ body {
   padding: 6px 14px;
   font-size: 11px; font-weight: 700;
   letter-spacing: 0.14em; text-transform: uppercase;
-  color: #6A8C2A;
+  color: #97BC53;
 }
 .ev-live-dot {
   width: 6px; height: 6px; border-radius: 50%;
@@ -190,28 +242,28 @@ body {
 .ev-hero .ev-meta-tag {
   background: rgba(255,255,255,0.1);
   border-color: rgba(255,255,255,0.25);
-  color: rgba(255,255,255,0.9);
+  
   backdrop-filter: blur(8px);
 }
 .ev-hero .ev-meta-tag.accent {
   background: rgba(151,188,83,0.25);
   border-color: rgba(151,188,83,0.5);
-  color: #97BC53;
+  
 }
 .ev-hero .ev-hero-sub { color: rgba(255,255,255,0.72); position: relative; z-index: 1; }
 .ev-hero .ev-hero-topics { position: relative; z-index: 1; }
 .ev-hero .ev-topic {
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.2);
-  color: rgba(255,255,255,0.75);
+  
   backdrop-filter: blur(8px);
 }
 .ev-hero .ev-hero-btns { position: relative; z-index: 1; }
 .ev-hero .btn-ghost {
   color: #FFFFFF;
-  border-color: rgba(255,255,255,0.35);
+  border-
 }
-.ev-hero .btn-ghost:hover { border-color: #97BC53; color: #97BC53; }
+.ev-hero .btn-ghost:hover { border-color: #97BC53;  }
 .ev-hero .ev-hero-stats {
   background: rgba(255,255,255,0.08);
   border-color: rgba(255,255,255,0.15);
@@ -228,7 +280,7 @@ body {
 
 .ev-hero-title {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(38px, 7vw, 96px);
+  font-size: clamp(28px, 4.5vw, 54px);
   font-weight: 900;
   line-height: 0.94;
   letter-spacing: -0.04em;
@@ -239,7 +291,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: clamp(22px, 4vw, 52px);
   font-weight: 300;
-  color: rgba(26,30,20,0.45);
+  color: rgba(255,255,255,0.45);
   letter-spacing: 0.08em;
   margin-bottom: 36px;
   position: relative;
@@ -261,13 +313,13 @@ body {
 .ev-meta-tag.accent {
   background: rgba(151,188,83,0.15);
   border-color: rgba(151,188,83,0.4);
-  color: var(--green);
+  
   font-weight: 600;
 }
 
 .ev-hero-sub {
   font-size: clamp(15px, 1.6vw, 18px);
-  color: rgba(26,30,20,0.55);
+  color: rgba(255,255,255,0.55);
   max-width: 640px;
   line-height: 1.75;
   margin-bottom: 20px;
@@ -281,7 +333,7 @@ body {
 }
 .ev-topic {
   font-size: 12px; font-weight: 600;
-  color: rgba(26,30,20,0.55);
+  color: rgba(255,255,255,0.55);
   background: rgba(151,188,83,0.08);
   border: 1px solid rgba(151,188,83,0.25);
   border-radius: 6px;
@@ -315,12 +367,12 @@ body {
   color: #6A8C2A; display: block;
   letter-spacing: -0.02em;
 }
-.ev-stat-label { font-size: 11px; color: rgba(26,30,20,0.5); margin-top: 2px; }
+.ev-stat-label { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
 
 /* ══════════════════════
    CONCEPT
 ══════════════════════ */
-.concept-section { background: #D4D6CC; }
+
 
 .concept-grid {
   display: grid;
@@ -332,13 +384,13 @@ body {
 .concept-blockquote {
   border-left: 3px solid #97BC53;
   padding: 20px 24px;
-  background: rgba(151,188,83,0.06);
+  background: rgba(151,188,83,0.05);
   border-radius: 0 10px 10px 0;
   margin-bottom: 0;
 }
 .concept-blockquote p {
   font-size: 16px;
-  color: rgba(26,30,20,0.7);
+  color: rgba(255,255,255,0.6);
   line-height: 1.8;
   margin-bottom: 14px !important;
 }
@@ -347,12 +399,12 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: clamp(18px, 2vw, 22px);
   font-weight: 700;
-  color: #1A1E14;
+  color: #FFFFFF;
   line-height: 1.35;
   letter-spacing: -0.015em;
   margin-bottom: 14px !important;
 }
-.concept-text p strong { color: #1A1E14; font-weight: 600; }
+.concept-text p strong { color: #FFFFFF; font-weight: 600; }
 .concept-scheme {
   display: flex;
   flex-direction: column;
@@ -388,7 +440,7 @@ body {
   background: #FFFFFF;
   border: 1px solid rgba(0,0,0,0.1);
   border-radius: 8px;
-  font-size: 13px; color: rgba(26,30,20,0.6);
+  font-size: 13px; color: rgba(255,255,255,0.6);
 }
 .concept-chip::before {
   content: '→'; color: #97BC53; font-size: 12px;
@@ -441,17 +493,18 @@ body {
   color: #6A8C2A;
   filter: drop-shadow(0 0 4px rgba(151,188,83,0.5));
 }
-.why-card p { font-size: 14px; color: rgba(26,30,20,0.6); line-height: 1.65; }
+.why-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
 .why-note {
+  color: rgba(255,255,255,0.7);
   margin-top: 28px;
   padding: 20px 26px;
   background: rgba(151,188,83,0.1);
   border: 1px solid rgba(151,188,83,0.3);
   border-radius: 12px;
-  font-size: 15px; color: rgba(26,30,20,0.75); line-height: 1.7;
+  font-size: 15px;  line-height: 1.7;
   max-width: 680px;
 }
-.why-note strong { color: #1A1E14; }
+.why-note strong { color: #FFFFFF; }
 
 /* ══════════════════════
    FOR WHOM
@@ -471,10 +524,11 @@ body {
   font-size: 16px; font-weight: 800;
   margin-bottom: 10px; letter-spacing: -0.01em;
 }
-.ev-fw-card p { font-size: 14px; color: rgba(26,30,20,0.6); line-height: 1.65; }
+.ev-fw-card p { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
 .ev-fw-note {
+  color: rgba(255,255,255,0.6);
   margin-top: 24px;
-  font-size: 15px; color: var(--muted);
+  font-size: 15px; 
   font-style: normal;
 }
 
@@ -495,7 +549,7 @@ body {
   border-radius: 16px;
   overflow: hidden;
   cursor: default;
-  height: 240px;
+  height: 340px;
   width: 100%;
   transition: transform 0.35s cubic-bezier(0.22,1,0.36,1);
 }
@@ -647,7 +701,7 @@ body {
 .topic-num {
   font-family: 'Inter', sans-serif;
   font-size: 10px; font-weight: 700;
-  letter-spacing: 0.2em; color: rgba(26,30,20,0.3);
+  letter-spacing: 0.2em; color: rgba(255,255,255,0.3);
   margin-bottom: 8px;
 }
 .topic-card h3 {
@@ -661,51 +715,64 @@ body {
    DIGITAL ECO BLOCK
 ══════════════════════ */
 .digital-section {
-  background: linear-gradient(135deg, #D8E0C8, #DDE5CC);
-  border-top: 1px solid rgba(151,188,83,0.3);
-  border-bottom: 1px solid rgba(151,188,83,0.3);
+  background: #222222;
+  border-top: 1px solid rgba(151,188,83,0.15);
+  border-bottom: 1px solid rgba(151,188,83,0.15);
 }
-.digital-callout-big {
+.digital-title {
   font-family: 'Inter', sans-serif;
-  font-size: clamp(36px, 6vw, 72px);
-  font-weight: 900;
-  color: #4A6318;
-  letter-spacing: -0.04em;
-  line-height: 1.0;
+  font-size: clamp(24px, 3vw, 36px);
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
   margin-bottom: 24px;
-  display: block;
+}
+.digital-right {
+  background: #2E2E2E;
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 20px;
+  padding: 36px 40px;
+  max-width: 680px;
 }
 .digital-lead {
-  font-size: 17px;
-  color: rgba(26,30,20,0.7);
+  color: rgba(255,255,255,0.65);
+  font-size: 16px;
   line-height: 1.75;
-  max-width: 640px;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
 }
 .digital-li-label {
+  color: rgba(255,255,255,0.35);
   font-family: 'Inter', sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   font-weight: 700;
-  color: #1A1E14;
-  margin-bottom: 14px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
 }
 .digital-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-  max-width: 520px;
+  gap: 0;
 }
 .digital-li {
+  color: rgba(255,255,255,0.8);
   display: flex;
-  align-items: flex-start;
-  gap: 10px;
+  align-items: center;
+  gap: 12px;
   font-size: 15px;
-  color: rgba(26,30,20,0.75);
+  font-weight: 500;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
 }
+.digital-li:last-child { border-bottom: none; }
 .digital-li::before {
-  content: '→';
-  color: #6A8C2A;
-  font-weight: 700;
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #97BC53;
   flex-shrink: 0;
 }
 
@@ -720,7 +787,7 @@ body {
   margin-top: 36px;
 }
 .adv-col.us .adv-item {
-  color: rgba(26,30,20,0.85);
+  color: rgba(255,255,255,0.85);
   font-weight: 600;
   font-size: 15px;
 }
@@ -729,12 +796,14 @@ body {
   border-radius: var(--radius);
 }
 .adv-col.them {
-  background: rgba(0,0,0,0.03);
-  border: 1px solid rgba(0,0,0,0.1);
+  background: #303030;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
 }
 .adv-col.us {
-  background: rgba(151,188,83,0.1);
-  border: 1px solid rgba(151,188,83,0.35);
+  background: rgba(151,188,83,0.08);
+  border: 1px solid rgba(151,188,83,0.25);
+  border-radius: 16px;
   position: relative;
 }
 .adv-badge {
@@ -753,18 +822,18 @@ body {
   font-size: 16px; font-weight: 800;
   margin-bottom: 20px; letter-spacing: -0.01em;
 }
-.adv-col.them h3 { color: rgba(26,30,20,0.4); }
-.adv-col.us h3 { color: #1A1E14; }
+.adv-col.them h3 { color: rgba(255,255,255,0.5); }
+.adv-col.us h3 { color: #F0F0F0; }
 .adv-item {
   display: flex; align-items: flex-start; gap: 10px;
   padding: 10px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
   font-size: 14px;
 }
 .adv-item:last-child { border-bottom: none; }
-.adv-col.them .adv-item { color: rgba(26,30,20,0.45); }
-.adv-col.them .adv-item::before { content: '—'; color: rgba(26,30,20,0.3); flex-shrink: 0; }
-.adv-col.us .adv-item { color: rgba(26,30,20,0.8); }
+.adv-col.them .adv-item { color: rgba(255,255,255,0.4); }
+.adv-col.them .adv-item::before { content: '—'; color: rgba(255,255,255,0.2); flex-shrink: 0; }
+.adv-col.us .adv-item { color: rgba(255,255,255,0.8); }
 .adv-col.us .adv-item::before { content: '✓'; color: #6A8C2A; font-weight: 700; flex-shrink: 0; }
 
 /* ══════════════════════
@@ -818,7 +887,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 15px; font-weight: 700; margin-bottom: 4px;
 }
-.tl-content p { font-size: 13px; color: rgba(26,30,20,0.55); line-height: 1.55; }
+.tl-content p { font-size: 13px; color: rgba(255,255,255,0.55); line-height: 1.55; }
 .tl-item.vip .tl-content h4 { color: #FFB830; }
 
 /* ══════════════════════
@@ -857,7 +926,7 @@ body {
   background: linear-gradient(135deg, rgba(151,188,83,0.08), rgba(100,180,100,0.05));
   border: 1px solid rgba(151,188,83,0.25);
   border-radius: 16px;
-  font-size: 15px; color: rgba(26,30,20,0.7);
+  font-size: 15px; color: rgba(255,255,255,0.7);
   line-height: 1.75;
 }
 .location-note {
@@ -869,45 +938,37 @@ body {
 /* ══════════════════════
    TICKETS
 ══════════════════════ */
-.tickets-section { background: #D4D6CC; }
+
 .tickets-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 16px;
-  margin-top: 52px;
-  align-items: start;
+  gap: 20px;
+  margin-top: 40px;
+  align-items: stretch; /* все карточки одной высоты */
 }
-.ticket-card.standard {
-  background: #FFFFFF !important;
-  border: 1px solid rgba(0,0,0,0.1) !important;
-  box-shadow: none !important;
-}
-.ticket-card.business {
-  background: rgba(151,188,83,0.22);
-  border: 1px solid rgba(151,188,83,0.6);
-  box-shadow: 0 8px 40px rgba(151,188,83,0.25);
-}
-.ticket-card.business .ticket-name { color: #4A6318; }
 .ticket-card {
-  padding: 36px 30px;
+  padding: 32px 28px;
   border-radius: 20px;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 .ticket-card.standard {
-  background: rgba(151,188,83,0.08);
-  border: 1px solid rgba(151,188,83,0.4);
-  box-shadow: 0 8px 40px rgba(151,188,83,0.15);
+  background: #2E2E2E;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.ticket-card.business {
+  background: rgba(151,188,83,0.1);
+  border: 1px solid rgba(151,188,83,0.35);
+  box-shadow: 0 8px 32px rgba(151,188,83,0.12);
 }
 .ticket-card.vip {
-  background: #1A1E14;
-  border: 1px solid #1A1E14;
-  box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  background: #1A2410;
+  border: 1px solid rgba(151,188,83,0.2);
+  box-shadow: 0 8px 40px rgba(0,0,0,0.4);
 }
-.ticket-card.vip .ticket-name { color: #FFFFFF; }
-.ticket-card.vip .ticket-price { color: #97BC53; }
-.ticket-card.vip .ticket-tier { color: rgba(255,255,255,0.45); }
-.ticket-card.vip .ticket-features li { color: rgba(255,255,255,0.75); border-bottom-color: rgba(255,255,255,0.08); }
-.ticket-card.vip .ticket-features li::before { color: #97BC53; }
+
+/* Бейджи */
 .ticket-badge {
   position: absolute;
   top: -12px; left: 50%;
@@ -918,75 +979,109 @@ body {
   padding: 5px 18px; border-radius: 100px;
   white-space: nowrap;
 }
-.ticket-badge--green {
-  background: #97BC53;
-  color: #1A1E14;
-}
-.ticket-badge--dark {
-  background: #FFFFFF;
-  color: #1A1E14;
-}
+.ticket-badge--green { background: #97BC53; color: #1A1A1A; }
+.ticket-badge--dark { background: #1A1A1A; color: #FFFFFF; border: 1px solid rgba(255,255,255,0.2); }
+
+/* Название билета */
 .ticket-tier {
-  font-size: 11px; font-weight: 700;
-  letter-spacing: 0.16em; text-transform: uppercase;
-  color: var(--muted); margin-bottom: 6px;
-}
-.ticket-name {
   font-family: 'Inter', sans-serif;
-  font-size: 26px; font-weight: 900;
-  letter-spacing: -0.02em; margin-bottom: 4px;
+  font-size: 18px; font-weight: 900;
+  letter-spacing: -0.01em;
+  color: #FFFFFF;
+  margin-bottom: 4px;
 }
-.ticket-card.vip .ticket-name { color: #6A8C2A; }
+.ticket-card.business .ticket-tier { color: #97BC53; }
+.ticket-card.vip .ticket-tier { color: #97BC53; }
+
+/* Цена */
 .ticket-price {
   font-family: 'Inter', sans-serif;
-  font-size: 52px; font-weight: 900;
+  font-size: 48px; font-weight: 900;
   letter-spacing: -0.04em;
-  color: #1A1E14; line-height: 1;
-  margin: 18px 0 24px;
+  color: #F0F0F0; line-height: 1;
+  margin: 12px 0 4px;
+  display: flex; align-items: center; gap: 6px;
 }
-.ticket-card.vip .ticket-price { color: #6A8C2A; }
+.ticket-price-sym { font-size: 28px; opacity: 0.7; }
+.ticket-card.vip .ticket-price { color: #97BC53; }
+
+/* Подзаголовок */
+.ticket-subtitle {
+  font-size: 13px;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+  line-height: 1.5;
+}
+
+/* Список */
 .ticket-features {
   list-style: none;
-  margin-bottom: 28px;
+  margin-bottom: 0;
+  flex: 1; /* растягивается чтобы кнопки были внизу */
 }
 .ticket-features li {
-  display: flex; align-items: center; gap: 9px;
-  font-size: 14px; color: rgba(26,30,20,0.7);
-  padding: 9px 0;
-  border-bottom: 1px solid rgba(0,0,0,0.07);
+  display: flex; align-items: flex-start; gap: 8px;
+  font-size: 14px; color: rgba(255,255,255,0.75);
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+  line-height: 1.4;
 }
 .ticket-features li:last-child { border-bottom: none; }
-.ticket-features li::before { content: '✓'; color: #6A8C2A; font-weight: 700; flex-shrink: 0; }
-.ticket-seats {
-  margin-top: 12px;
-  text-align: center;
-  font-size: 12px;
-  color: rgba(26,30,20,0.45);
+.ticket-features li.yes::before { content: '✓'; color: #97BC53; font-weight: 700; flex-shrink: 0; }
+.ticket-features li.no::before { content: '✗'; color: rgba(255,255,255,0.3); font-weight: 700; flex-shrink: 0; }
+
+/* Хайлайт */
+.ticket-highlight {
+  font-size: 13px;
+  color: rgba(255,255,255,0.6);
+  margin: 16px 0 12px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.04);
+  border-radius: 8px;
+  border-left: 3px solid #97BC53;
 }
-.ticket-seats strong { color: #6A8C2A; }
-.ticket-seats--light { color: rgba(255,255,255,0.4); }
-.ticket-seats--light strong { color: #97BC53; }
+.vip-highlight { border-left-color: #97BC53; color: #97BC53; background: rgba(151,188,83,0.06); }
+
+/* Кол-во мест */
+.ticket-seats-new {
+  font-size: 12px;
+  color: rgba(255,255,255,0.4);
+  margin: 14px 0 12px;
+  text-align: center;
+}
+.ticket-seats-new strong { color: #97BC53; }
+
+/* Кнопка */
+.ticket-btn {
+  width: 100%;
+  justify-content: center;
+  margin-top: auto;
+}
+
 
 .tickets-note {
+  color: rgba(255,255,255,0.5);
   margin-top: 16px;
   text-align: center;
-  font-size: 13px; color: rgba(26,30,20,0.5);
+  font-size: 13px; 
 }
 
 /* ══════════════════════
    REGISTRATION FORM
 ══════════════════════ */
-.reg-section { background: #E2E4DC; }
+
 .reg-inner {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 64px;
   align-items: start;
 }
-.reg-desc p { font-size: 16px; color: rgba(26,30,20,0.6); line-height: 1.78; margin-top: 16px; }
+.reg-desc p { font-size: 16px; color: rgba(255,255,255,0.6); line-height: 1.78; margin-top: 16px; }
 .reg-form {
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.1);
+  background: #2A2A2A;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 20px;
   padding: 36px 32px;
 }
@@ -995,12 +1090,12 @@ body {
   display: block;
   font-size: 12px; font-weight: 600;
   letter-spacing: 0.08em; text-transform: uppercase;
-  color: rgba(26,30,20,0.5); margin-bottom: 7px;
+  color: rgba(255,255,255,0.5); margin-bottom: 7px;
 }
 .form-input, .form-select {
   width: 100%;
-  background: var(--surface);
-  border: 1px solid var(--border2);
+  background: #1E1E1E;
+  border: 1px solid rgba(255,255,255,0.1);
   border-radius: 9px;
   padding: 13px 16px;
   font-family: 'Inter', sans-serif;
@@ -1009,7 +1104,7 @@ body {
   transition: border-color 0.2s;
   appearance: none;
 }
-.form-input::placeholder { color: rgba(26,30,20,0.3); }
+.form-input::placeholder { color: rgba(255,255,255,0.25); }
 .form-input:focus, .form-select:focus { border-color: rgba(151,188,83,0.5); }
 .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
 .form-submit {
@@ -1029,7 +1124,7 @@ body {
 .form-note {
   margin-top: 12px;
   text-align: center;
-  font-size: 12px; color: rgba(26,30,20,0.45);
+  font-size: 12px; color: rgba(255,255,255,0.45);
   line-height: 1.6;
 }
 
@@ -1059,7 +1154,7 @@ body {
   font-size: 16px; font-weight: 800;
   letter-spacing: -0.01em; margin-bottom: 4px;
 }
-.org-desc { font-size: 14px; color: rgba(26,30,20,0.6); line-height: 1.65; }
+.org-desc { font-size: 14px; color: rgba(255,255,255,0.6); line-height: 1.65; }
 
 /* ══════════════════════
    FINAL CTA
@@ -1086,7 +1181,7 @@ body {
   line-height: 1.1; position: relative;
 }
 .ev-final p {
-  font-size: 16px; color: rgba(26,30,20,0.55);
+  font-size: 16px; color: rgba(255,255,255,0.55);
   max-width: 520px; margin: 0 auto 40px;
   line-height: 1.75; position: relative;
 }
@@ -1110,8 +1205,8 @@ body {
   display: flex;
   align-items: flex-start;
   gap: 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: #333333;
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 14px;
   padding: 20px 24px;
   transition: border-color 0.2s;
@@ -1134,14 +1229,14 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #1A1E14;
+  color: #FFFFFF;
   margin-bottom: 4px;
   letter-spacing: -0.01em;
 }
 
 .prog-desc {
   font-size: 13px;
-  color: rgba(26,30,20,0.5);
+  color: rgba(255,255,255,0.45);
   line-height: 1.5;
 }
 
@@ -1154,7 +1249,7 @@ body {
   gap: 0;
 }
 .prog-block:hover { border-color: rgba(151,188,83,0.4); }
-.prog-block.open { border-color: rgba(151,188,83,0.5); background: rgba(151,188,83,0.04); }
+.prog-block.open { border-color: rgba(151,188,83,0.4); background: rgba(151,188,83,0.06); }
 
 .prog-header {
   display: flex;
@@ -1215,7 +1310,7 @@ body {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.4s cubic-bezier(0.22,1,0.36,1);
-  border-top: 0px solid rgba(0,0,0,0.07);
+  border-top: 0px solid rgba(255,255,255,0.07);
   display: flex;
   flex-direction: column;
   gap: 0;
@@ -1223,7 +1318,7 @@ body {
 }
 .prog-block.open .prog-speakers {
   max-height: 400px;
-  border-top: 1px solid rgba(0,0,0,0.07);
+  border-top: 1px solid rgba(255,255,255,0.07);
   padding: 16px 24px 20px;
   gap: 14px;
 }
@@ -1259,12 +1354,12 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 14px;
   font-weight: 700;
-  color: #1A1E14;
+  color: #F0F0F0;
   margin-bottom: 2px;
 }
 .prog-spk-role {
   font-size: 12px;
-  color: rgba(26,30,20,0.5);
+  color: rgba(255,255,255,0.45);
 }
 
 /* VIP строка */
@@ -1278,12 +1373,13 @@ body {
   margin: 40px 0 48px;
 }
 .headliners-label {
+  color: rgba(255,255,255,0.4);
   font-family: 'Inter', sans-serif;
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(26,30,20,0.4);
+  
   margin-bottom: 14px;
 }
 /* Новый знак белорусского рубля — Б с чертой */
@@ -1309,20 +1405,20 @@ body {
 .day-note {
   margin-top: 20px;
   padding: 24px 28px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: #333333;
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 14px;
 }
 .day-note-title {
   font-family: 'Inter', sans-serif;
   font-size: 15px;
   font-weight: 700;
-  color: #1A1E14;
+  color: #FFFFFF;
   margin-bottom: 8px;
 }
 .day-note-text {
   font-size: 14px;
-  color: rgba(26,30,20,0.55);
+  color: rgba(255,255,255,0.5);
   line-height: 1.7;
 }
 
@@ -1338,8 +1434,8 @@ body {
   align-items: center;
   text-align: center;
   padding: 28px 20px;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.08);
+  background: #333333;
+  border: 1px solid rgba(255,255,255,0.07);
   border-radius: 16px;
   transition: border-color 0.2s, transform 0.2s;
 }
@@ -1351,8 +1447,8 @@ body {
   width: 110px;
   height: 110px;
   border-radius: 50%;
-  background: rgba(151,188,83,0.12);
-  border: 2px solid rgba(151,188,83,0.3);
+  background: rgba(151,188,83,0.08);
+  border: 2px solid rgba(151,188,83,0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1372,7 +1468,7 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 800;
-  color: #1A1E14;
+  color: #FFFFFF;
   margin-bottom: 4px;
   letter-spacing: -0.01em;
 }
@@ -1385,7 +1481,7 @@ body {
 }
 .headliner-desc {
   font-size: 13px;
-  color: rgba(26,30,20,0.55);
+  color: rgba(255,255,255,0.5);
   line-height: 1.6;
 }
 
@@ -1430,8 +1526,8 @@ body {
   cursor: pointer;
   transition: all 0.2s;
 }
-.tl-toggle-btn:hover { color: #4A6318; }
-.tl-toggle-btn.open { color: #4A6318; }
+.tl-toggle-btn:hover { color: #97BC53; }
+.tl-toggle-btn.open { color: #97BC53; }
 
 /* Инфопартнёры */
 .partners-grid {
@@ -1447,8 +1543,8 @@ body {
   height: 80px;
   border-radius: 50%;
   overflow: hidden;
-  background: #FFFFFF;
-  border: 1px solid rgba(0,0,0,0.1);
+  background: #323232;
+  border: 1px solid rgba(255,255,255,0.1);
   flex-shrink: 0;
   display: block;
   transition: transform 0.2s, box-shadow 0.2s;
@@ -1478,7 +1574,16 @@ body {
   top: -0.05em;
 }
 
-/* Специальные блоки в topics */
+/* Пульсация кнопки в навбаре */
+@keyframes pulse-btn {
+  0%   { box-shadow: 0 0 0 0 rgba(151,188,83,0.6); }
+  70%  { box-shadow: 0 0 0 12px rgba(151,188,83,0); }
+  100% { box-shadow: 0 0 0 0 rgba(151,188,83,0); }
+}
+.nav-pill {
+  animation: pulse-btn 2s infinite;
+  color: #1A1E14 !important;
+}
 .topic-special {
   background: rgba(151,188,83,0.07) !important;
   border: 1px solid rgba(151,188,83,0.35) !important;
@@ -1494,7 +1599,7 @@ body {
   border-radius: 3px 0 0 3px;
 }
 .topic-special .topic-num { color: #6A8C2A; }
-.topic-special h3 { color: #1A1E14; }
+.topic-special h3 { color: #F0F0F0; }
 
 /* Спикеры в карточках тем */
 .topic-speakers {
@@ -1503,7 +1608,7 @@ body {
   gap: 16px;
   margin-top: 18px;
   padding-top: 18px;
-  border-top: 1px solid rgba(0,0,0,0.07);
+  border-top: 1px solid rgba(255,255,255,0.07);
 }
 .topic-speaker {
   display: flex;
@@ -1541,13 +1646,13 @@ body {
   font-family: 'Inter', sans-serif;
   font-size: 16px;
   font-weight: 800;
-  color: #1A1E14;
+  color: #FFFFFF;
   line-height: 1.2;
   letter-spacing: -0.01em;
 }
 .topic-speaker-role {
   font-size: 13px;
-  color: rgba(26,30,20,0.5);
+  color: rgba(255,255,255,0.45);
   line-height: 1.4;
 }
 .topic-speaker-btn {
@@ -1565,8 +1670,8 @@ body {
   width: fit-content;
 }
 .topic-speaker-btn:hover {
-  color: #4A6318;
-  border-color: #4A6318;
+  color: #97BC53;
+  border-
 }
 
 .ev-page::after { display: none; }
@@ -1608,7 +1713,7 @@ body {
   .ev-hero .container { align-items: center; justify-content: center; }
   .ev-hero-eyebrow { margin-bottom: 12px; }
   .ev-live { font-size: 10px; padding: 5px 12px; }
-  .ev-hero-title { font-size: clamp(32px, 10vw, 48px); line-height: 0.95; margin-bottom: 6px; }
+  .ev-hero-title { font-size: clamp(28px, 4.5vw, 54px); line-height: 0.95; margin-bottom: 6px; }
   .ev-hero-title-2 { font-size: clamp(14px, 4.5vw, 20px); margin-bottom: 16px; }
   .ev-hero-sub { font-size: 14px; margin-bottom: 12px; text-align: center; max-width: 320px; }
   .ev-hero-topics { margin-bottom: 16px; justify-content: center; }
@@ -1618,6 +1723,99 @@ body {
   .ev-hero-meta { order: 10; flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 6px; margin-bottom: 0; margin-top: 4px; }
   .ev-meta-tag { font-size: 11px; padding: 6px 10px; }
 }
+
+/* ══ FOR WHOM NEW ══ */
+.fw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  margin-top: 36px;
+}
+.fw-card {
+  background: #2E2E2E;
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 16px;
+  padding: 28px;
+}
+.fw-icon {
+  width: 44px;
+  height: 44px;
+  background: rgba(151,188,83,0.08);
+  border: 1px solid rgba(151,188,83,0.2);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+}
+.fw-title {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+.fw-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  color: #97BC53;
+  background: rgba(151,188,83,0.1);
+  border: 1px solid rgba(151,188,83,0.25);
+  border-radius: 100px;
+  padding: 2px 10px;
+  letter-spacing: 0;
+  margin-left: 6px;
+  vertical-align: middle;
+}
+.fw-desc {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  line-height: 1.65;
+  margin: 0;
+}
+.fw-not {
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: rgba(255,60,60,0.05);
+  border: 1px solid rgba(255,60,60,0.15);
+  border-radius: 14px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.fw-not-title {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.7);
+  white-space: nowrap;
+}
+.fw-not-item {
+  font-size: 14px;
+  color: rgba(255,255,255,0.45);
+  padding-left: 14px;
+  position: relative;
+}
+.fw-not-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: rgba(255,60,60,0.5);
+}
+@media (max-width: 768px) {
+  .fw-grid { grid-template-columns: 1fr; }
+  .fw-not { flex-direction: column; gap: 10px; }
+}
+
+/* ══ ЧЕРЕДОВАНИЕ ФОНОВ СЕКЦИЙ ══ */
+section { background: #262626; }
+section:nth-of-type(even) { background: #181818; }
+section.ev-hero { background: none; }
+section.ev-final { background: #1A1A1A; }
 </style>
 </head>
 <body class="ev-page">
@@ -1651,38 +1849,29 @@ body {
     </div>
   </div>
 
-  <h1 class="ev-hero-title">WEB3 AI<br>VILLAGE</h1>
-  <p class="ev-hero-title-2">БИЗНЕС TALK</p>
+  <p class="ev-hero-label">ГЛАВНОЕ СОБЫТИЕ ДЛЯ БИЗНЕСА ВЕСНЫ</p>
+  <h1 class="ev-hero-title">БИЗНЕС VILLAGE.<br>ЦИФРОВАЯ ЭКОНОМИКА.<br>Ai. WEB3.</h1>
 
   <p class="ev-hero-sub">
-    Выездное деловое событие, где не читают сухие доклады, а вместе с залом разбирают реальные вопросы, кейсы и возможности новой цифровой экономики.
+    Инновационные инструменты и возможности для личного роста, развития бизнеса и проектов в новой цифровой экономике Беларуси.
   </p>
 
-  <div class="ev-hero-topics">
-    <span class="ev-topic">AI</span>
-    <span class="ev-topic">Web3</span>
-    <span class="ev-topic">Цифровая экономика</span>
-    <span class="ev-topic">Маркетинг</span>
-    <span class="ev-topic">Регуляторика</span>
-  </div>
+  <p class="ev-hero-tagline">Не просто конференция, а 8 часов живого диалога с экспертами.</p>
 
   <div class="ev-hero-btns">
-    <a href="#tickets" class="btn btn-primary">Оставить заявку</a>
-    <a href="#topics" class="btn btn-ghost">Смотреть программу</a>
+    <a href="#tickets" class="btn btn-primary btn-hero-big">Забронировать место — от 80 р.</a>
+  </div>
+
+  <div class="ev-hero-perks">
+    <span class="ev-perk">📍 Трансфер включен</span>
+    <span class="ev-perk">🍽 Еда включена</span>
+    <span class="ev-perk">💼 Разбор вашего проекта</span>
   </div>
 
   <div class="ev-hero-meta" style="margin-top: 32px;">
     <div class="ev-meta-tag accent">📅 2 мая 2026</div>
     <div class="ev-meta-tag">📍 Комарово Village · 4 км от Минска</div>
     <div class="ev-meta-tag">⏱ 11:00 — 03:00</div>
-  </div>
-
-  <div class="ev-hero-stats">
-    <div class="ev-stat"><span class="ev-stat-num">200+</span><div class="ev-stat-label">участников</div></div>
-    <div class="ev-stat"><span class="ev-stat-num">8</span><div class="ev-stat-label">экспертов</div></div>
-    <div class="ev-stat"><span class="ev-stat-num">5</span><div class="ev-stat-label">тем дня</div></div>
-    <div class="ev-stat"><span class="ev-stat-num">Q&A</span><div class="ev-stat-label">живой диалог</div></div>
-    <div class="ev-stat"><span class="ev-stat-num">VIP</span><div class="ev-stat-label">afterparty</div></div>
   </div>
 
 </div>
@@ -1693,7 +1882,7 @@ body {
 <!-- ══════════════════════════
      TOPICS
 ══════════════════════════ -->
-<section class="section" id="topics">
+<section class="section sec-light" id="topics">
 <div class="container">
   <span class="s-label">Ключевые темы дня</span>
   <h2 class="s-title">4 темы · 8 экспертов</h2>
@@ -1804,7 +1993,7 @@ body {
 <!-- ══════════════════════════
      WHAT INSIDE — фото-сетка
 ══════════════════════════ -->
-<section class="section section--dark">
+<section class="section sec-dark">
 <div class="container">
   <span class="s-label">Что внутри</span>
   <h2 class="s-title">Что тебя ждёт</h2>
@@ -1823,7 +2012,7 @@ body {
 
     <!-- 3. Разборы кейсов -->
     <div class="iphoto-card">
-      <div class="iphoto-bg" style="background-image: url('discussion.png'); background-position: center 30%;"></div>
+      <div class="iphoto-bg" style="background-image: url('discussion.png'); background-position: center 10%;"></div>
       <div class="iphoto-overlay"></div>
       <div class="iphoto-content">
         <div class="iphoto-title">Разборы реальных кейсов</div>
@@ -1871,42 +2060,43 @@ body {
 <!-- ══════════════════════════
      FOR WHOM
 ══════════════════════════ -->
-<section class="section">
+<section class="section sec-light">
 <div class="container">
-  <span class="s-label">Для кого</span>
-  <h2 class="s-title">Кому это будет<br>особенно полезно</h2>
+  <h2 class="s-title">Кому это обязательно нужно</h2>
 
-  <div class="ev-fw-grid">
-    <div class="ev-fw-card card">
-      <h3>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6A8C2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:2px"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
-        Предприниматели и владельцы бизнеса
-      </h3>
-      <p>Тем, кто ищет новые инструменты роста, гибкости, эффективности и развития в новой цифровой среде.</p>
+  <div class="fw-grid">
+
+    <div class="fw-card">
+      <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#97BC53" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg></div>
+      <div class="fw-title">Владельцам бизнеса <span class="fw-tag">оборот от $10к/мес</span></div>
+      <p class="fw-desc">Узнаете, что ждёт Беларусь на фоне цифрового рубля и что такое новая цифровая экономика. Как сократить операционные расходы на 30% через AI-автоматизацию и усилить маркетинг благодаря инструментам Web3.</p>
     </div>
-    <div class="ev-fw-card card">
-      <h3>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6A8C2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:2px"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h2v-6H7z"/><path d="M11 16h2V8h-2z"/><path d="M15 16h2v-3h-2z"/><path d="M21 7l-5 5-3-3-4 4"/></svg>
-        Маркетологи, growth и операционные
-      </h3>
-      <p>Тем, кто отвечает за результат, процессы, воронки, внедрение и адаптацию к новому рынку.</p>
+
+    <div class="fw-card">
+      <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#97BC53" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M7 16h2v-6H7z"/><path d="M11 16h2V8h-2z"/><path d="M15 16h2v-4h-2z"/><path d="M19 8l-4 4-3-3-4 4"/></svg></div>
+      <div class="fw-title">Маркетологам, топ-менеджерам, growth-специалистам</div>
+      <p class="fw-desc">Заберёте 5 рабочих каналов привлечения из Web3-среды — не реклама, а community.</p>
     </div>
-    <div class="ev-fw-card card">
-      <h3>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6A8C2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:2px"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
-        AI, Web3 и digital-практики
-      </h3>
-      <p>Тем, кто хочет видеть не только технологию, но и её прикладную ценность для бизнеса.</p>
+
+    <div class="fw-card">
+      <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#97BC53" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></div>
+      <div class="fw-title">AI-специалистам и разработчикам</div>
+      <p class="fw-desc">Увидите реальные кейсы внедрения, а не теорию. Найдёте заказчиков на afterparty.</p>
     </div>
-    <div class="ev-fw-card card">
-      <h3>
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#6A8C2A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:2px"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-        Стартапы, основатели, инвесторы
-      </h3>
-      <p>Тем, кто ищет новые модели, связи, гипотезы и точки роста в цифровой экономике.</p>
+
+    <div class="fw-card">
+      <div class="fw-icon"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#97BC53" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+      <div class="fw-title">Стартаперам и инвесторам</div>
+      <p class="fw-desc">Питч-сессия с экспертами. Шанс получить фидбек и найти инвестиции.</p>
     </div>
+
   </div>
-  <p class="ev-fw-note">Если тебе важно не отстать от рынка, а понимать, как использовать новые инструменты себе в плюс — тебе сюда.</p>
+
+  <div class="fw-not">
+    <div class="fw-not-title">❌ Не подойдёт:</div>
+    <div class="fw-not-item">Тем, кто ждёт «волшебной таблетки» без работы</div>
+    <div class="fw-not-item">Тем, кто боится слова «крипта» и не готов к изменениям</div>
+  </div>
 
 </div>
 </section>
@@ -1914,7 +2104,7 @@ body {
 <!-- ══════════════════════════
      WHY BE HERE
 ══════════════════════════ -->
-<section class="section section--dark">
+<section class="section sec-dark">
 <div class="container">
   <span class="s-label">Почему стоит быть здесь</span>
   <h2 class="s-title">Что ты унесёшь<br>с собой</h2>
@@ -1985,19 +2175,22 @@ body {
 <!-- ══════════════════════════
      DIGITAL ECO BLOCK
 ══════════════════════════ -->
-<section class="section digital-section">
+<section class="section sec-light digital-section">
 <div class="container">
 
-  <div class="digital-callout-big">Почему<br>нельзя<br>игнорировать</div>
-  <p class="digital-lead">Мы говорим о Web3, крипте и цифровых валютах не как о модной тусовке и не как о сказке про быстрые деньги.</p>
+  <h2 class="digital-title">Почему нельзя игнорировать</h2>
 
-  <div class="digital-list">
-    <div class="digital-li-label">Мы говорим о них как о реальных инструментах:</div>
-    <div class="digital-li">для понимания новой экономики</div>
-    <div class="digital-li">для гибкости в расчётах и переводах</div>
-    <div class="digital-li">для новых моделей взаимодействия</div>
-    <div class="digital-li">для ориентации в том, как меняется рынок</div>
-    <div class="digital-li">для понимания рисков и возможностей</div>
+  <div class="digital-right">
+    <p class="digital-lead">Мы говорим о Web3, крипте и цифровых валютах не как о модной тусовке и не как о сказке про быстрые деньги.</p>
+
+    <div class="digital-list">
+      <div class="digital-li-label">Мы говорим о них как о реальных инструментах:</div>
+      <div class="digital-li">для понимания новой экономики</div>
+      <div class="digital-li">для гибкости в расчётах и переводах</div>
+      <div class="digital-li">для новых моделей взаимодействия</div>
+      <div class="digital-li">для ориентации в том, как меняется рынок</div>
+      <div class="digital-li">для понимания рисков и возможностей</div>
+    </div>
   </div>
 
 </div>
@@ -2006,7 +2199,7 @@ body {
 <!-- ══════════════════════════
      FORMAT ADVANTAGE
 ══════════════════════════ -->
-<section class="section">
+<section class="section sec-dark">
 <div class="container">
   <span class="s-label">Не просто конференция</span>
 
@@ -2060,7 +2253,7 @@ body {
 <!-- ══════════════════════════
      TIMELINE
 ══════════════════════════ -->
-<section class="section section--dark">
+<section class="section sec-light">
 <div class="container">
   <span class="s-label">Программа дня</span>
   <h2 class="s-title">Как будет устроен день</h2>
@@ -2124,13 +2317,6 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров" style="object-position: center 15%;"></div>
-            <div>
-              <div class="prog-spk-name">Сергей Хитров</div>
-              <div class="prog-spk-role">Основатель форума Blockchain Life</div>
-            </div>
-          </div>
-          <div class="prog-speaker">
             <div class="prog-avatar"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
             <div>
               <div class="prog-spk-name">Иван Жизневский</div>
@@ -2152,17 +2338,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
-            <div>
-              <div class="prog-spk-name">Андрей Тепляков</div>
-              <div class="prog-spk-role">W3B-Ai, PRO.UP</div>
-            </div>
-          </div>
-          <div class="prog-speaker">
             <div class="prog-avatar"><img src="potolitsyna.jpg" alt="Татьяна Потолицына"></div>
             <div>
               <div class="prog-spk-name">Татьяна Потолицына</div>
               <div class="prog-spk-role">Внедрение AI-моделей</div>
+            </div>
+          </div>
+          <div class="prog-speaker">
+            <div class="prog-avatar"><img src="dranitsa.jpg" alt="Максим Драница"></div>
+            <div>
+              <div class="prog-spk-name">Максим Драница</div>
+              <div class="prog-spk-role">Автоматизация с AI</div>
             </div>
           </div>
         </div>
@@ -2208,17 +2394,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="malinina.jpg" alt="Света Малинина" style="object-position: center 20%;"></div>
+            <div class="prog-avatar"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
             <div>
-              <div class="prog-spk-name">Света Малинина</div>
-              <div class="prog-spk-role">Налоги, финансы</div>
+              <div class="prog-spk-name">Андрей Тепляков</div>
+              <div class="prog-spk-role">W3B-Ai, PRO.UP</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
+            <div class="prog-avatar"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
             <div>
-              <div class="prog-spk-name">Анна Алексеева</div>
-              <div class="prog-spk-role">Основатель FinLab.by</div>
+              <div class="prog-spk-name">Тамара Кулинкович</div>
+              <div class="prog-spk-role">Основатель Skademy.by</div>
             </div>
           </div>
         </div>
@@ -2236,17 +2422,17 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
+            <div class="prog-avatar"><img src="malinina.jpg" alt="Света Малинина" style="object-position: center 20%;"></div>
             <div>
-              <div class="prog-spk-name">Тамара Кулинкович</div>
-              <div class="prog-spk-role">Основатель Skademy.by</div>
+              <div class="prog-spk-name">Света Малинина</div>
+              <div class="prog-spk-role">Налоги, финансы</div>
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="dranitsa.jpg" alt="Максим Драница"></div>
+            <div class="prog-avatar"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
             <div>
-              <div class="prog-spk-name">Максим Драница</div>
-              <div class="prog-spk-role">Автоматизация с AI</div>
+              <div class="prog-spk-name">Анна Алексеева</div>
+              <div class="prog-spk-role">Основатель FinLab.by</div>
             </div>
           </div>
         </div>
@@ -2298,7 +2484,7 @@ body {
 <!-- ══════════════════════════
      ORGANIZERS
 ══════════════════════════ -->
-<section class="section section--dark">
+<section class="section sec-dark">
 <div class="container">
   <span class="s-label">Кто организует</span>
   <h2 class="s-title">За событием стоят</h2>
@@ -2328,70 +2514,65 @@ body {
 <!-- ══════════════════════════
      TICKETS
 ══════════════════════════ -->
-<section class="section tickets-section" id="tickets">
+<section class="section sec-light tickets-section" id="tickets">
 <div class="container">
-  <span class="s-label">Билеты</span>
-  <h2 class="s-title">Выбери формат участия</h2>
-  <p class="s-sub">Три варианта — выбери подходящий.</p>
+  <h2 class="s-title">Выберите формат участия</h2>
 
   <div class="tickets-grid">
 
     <!-- Стандарт -->
     <div class="ticket-card standard">
-      <div class="ticket-tier">Базовый</div>
-      <div class="ticket-name">Стандарт</div>
-      <div class="ticket-price">80 <span style="font-size:24px;color:var(--muted)"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <div class="ticket-tier">Стандарт</div>
+      <div class="ticket-price">80 <span class="ticket-price-sym"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <div class="ticket-subtitle">Для тех, кто хочет знать, что происходит</div>
       <ul class="ticket-features">
-        <li>Трансфер из Минска и обратно</li>
-        <li>Вся основная программа 11:00–20:00</li>
-        <li>4 тематических блока с экспертами</li>
-        <li>Живые Q&A сессии с залом</li>
-        <li>Разборы проектов участников</li>
-        <li>Нетворкинг в течение дня</li>
-        <li>Кофе-брейки и кейтеринг</li>
-        <li>Партнёрская зона</li>
+        <li class="yes">Вся программа (4 блока, 8 спикеров)</li>
+        <li class="yes">Q&A сессии (можно задать вопрос)</li>
+        <li class="yes">Трансфер и кофе-брейки</li>
+        <li class="yes">Общий нетворкинг</li>
+        <li class="no">Без записи (только живое участие)</li>
       </ul>
-      <a href="#reg" class="btn btn-ghost" style="width:100%;justify-content:center;">Купить Стандарт</a>
-      <div class="ticket-seats">🎟 Всего мест: <strong>50</strong></div>
+      <div class="ticket-seats-new">🎟 Осталось: <strong>48 мест</strong></div>
+      <a href="#reg" class="btn btn-ghost ticket-btn">Купить</a>
     </div>
 
     <!-- Бизнес -->
     <div class="ticket-card business">
       <div class="ticket-badge ticket-badge--green">⭐ Рекомендуем</div>
-      <div class="ticket-tier">Продвинутый</div>
-      <div class="ticket-name">Бизнес</div>
-      <div class="ticket-price">170 <span style="font-size:24px;color:var(--muted)"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <div class="ticket-tier">Бизнес</div>
+      <div class="ticket-price">170 <span class="ticket-price-sym"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <div class="ticket-subtitle">Для тех, кто будет внедрять инструменты</div>
       <ul class="ticket-features">
-        <li>Всё из Стандарта</li>
-        <li>Размещение в первых рядах после VIP</li>
-        <li>Приоритетный вход без очереди</li>
-        <li>Отдельная нетворкинг-зона</li>
+        <li class="yes">Всё из Стандарта +</li>
+        <li class="yes">Самари всех выступлений (PDF)</li>
+        <li class="yes">Приоритетные места (ряды 3–10)</li>
+        <li class="yes">Отдельная зона кейтеринга</li>
+        <li class="yes">Чек-листы и шаблоны спикеров</li>
       </ul>
-      <a href="#reg" class="btn btn-ghost" style="width:100%;justify-content:center;">Купить Бизнес</a>
-      <div class="ticket-seats">🎟 Всего мест: <strong>30</strong></div>
+      <div class="ticket-highlight">💎 Лучший выбор для владельцев бизнеса</div>
+      <div class="ticket-seats-new">🎟 Осталось: <strong>25 мест</strong></div>
+      <a href="#reg" class="btn btn-ghost ticket-btn">Купить</a>
     </div>
 
     <!-- VIP -->
     <div class="ticket-card vip">
       <div class="ticket-badge ticket-badge--dark">👑 Доминируй</div>
-      <div class="ticket-tier">Максимум</div>
-      <div class="ticket-name">VIP</div>
-      <div class="ticket-price">450 <span style="font-size:24px;color:rgba(151,188,83,0.6)"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <div class="ticket-tier">VIP</div>
+      <div class="ticket-price">450 <span class="ticket-price-sym"><svg class="byr-icon" viewBox="0 0 22 26" xmlns="http://www.w3.org/2000/svg" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="square" stroke-linejoin="miter"><line x1="6" y1="2" x2="6" y2="24"/><line x1="6" y1="2" x2="15" y2="2"/><path d="M6 13 L14 13 C18 13 20 15 20 18 C20 21 18 24 14 24 L6 24" fill="none" stroke-linejoin="round" stroke-linecap="round"/><line x1="3" y1="17" x2="14" y2="17" stroke-width="2.4" stroke-linecap="square"/></svg></span></div>
+      <div class="ticket-subtitle">Для тех, кто ищет партнёров и инвесторов</div>
       <ul class="ticket-features">
-        <li>Всё из Бизнеса</li>
-        <li>Размещение в первых рядах</li>
-        <li>VIP afterparty 22:00 – 03:00</li>
-        <li>Шашлык-пати и кавер-бенд</li>
-        <li>Тесный нетворкинг со спикерами</li>
-        <li>Прямой контакт с партнёрами вечером</li>
+        <li class="yes">Всё из Бизнеса +</li>
+        <li class="yes">VIP Afterparty (закрытая вечеринка с фуршетом до 03:00)</li>
+        <li class="yes">Личное знакомство со всеми спикерами</li>
+        <li class="yes">Размещение в первых рядах</li>
+        <li class="yes">Трансфер комфорт-классом</li>
+        <li class="yes">Доступ к закрытому чату с экспертами</li>
       </ul>
-      <a href="#reg" class="btn btn-primary" style="width:100%;justify-content:center;">Купить VIP</a>
-      <div class="ticket-seats ticket-seats--light">🎟 Всего мест: <strong>15</strong></div>
+      <div class="ticket-highlight vip-highlight">👑 Только 40 человек. Уже продано: 19</div>
+      <a href="#reg" class="btn btn-primary ticket-btn">Купить VIP</a>
     </div>
 
   </div>
-
-  <p class="tickets-note">⚡ Количество мест ограничено. Ранняя регистрация — лучшие места и нетворкинг.</p>
 
 </div>
 </section>
@@ -2399,7 +2580,7 @@ body {
 <!-- ══════════════════════════
      REGISTRATION FORM
 ══════════════════════════ -->
-<section class="section reg-section" id="reg">
+<section class="section sec-dark reg-section" id="reg">
 <div class="container">
   <div class="reg-inner">
     <div class="reg-desc">
@@ -2410,31 +2591,31 @@ body {
     <div class="reg-form">
       <div class="form-group">
         <label class="form-label">Имя</label>
-        <input type="text" class="form-input" placeholder="Ваше имя">
+        <input id="f-name" type="text" class="form-input" placeholder="Ваше имя">
       </div>
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Телефон</label>
-          <input type="tel" class="form-input" placeholder="+375 XX XXX XX XX">
+          <input id="f-phone" type="tel" class="form-input" placeholder="+375 XX XXX XX XX">
         </div>
         <div class="form-group">
           <label class="form-label">Telegram</label>
-          <input type="text" class="form-input" placeholder="@username">
+          <input id="f-tg" type="text" class="form-input" placeholder="@username">
         </div>
       </div>
       <div class="form-row">
         <div class="form-group">
           <label class="form-label">Тип билета</label>
-          <select class="form-select">
+          <select id="f-ticket" class="form-select">
             <option value="">Выберите</option>
-            <option value="standard">Стандарт — 80 р.</option>
-            <option value="business">Бизнес — 170 р.</option>
-            <option value="vip">VIP — 450 р.</option>
+            <option value="Стандарт — 80 р.">Стандарт — 80 р.</option>
+            <option value="Бизнес — 170 р.">Бизнес — 170 р.</option>
+            <option value="VIP — 450 р.">VIP — 450 р.</option>
           </select>
         </div>
         <div class="form-group">
           <label class="form-label">Количество</label>
-          <select class="form-select">
+          <select id="f-qty" class="form-select">
             <option>1</option>
             <option>2</option>
             <option>3</option>
@@ -2442,18 +2623,67 @@ body {
           </select>
         </div>
       </div>
-      <button class="form-submit">Оставить заявку →</button>
-      <p class="form-note">После оформления заявки с вами свяжется руководитель проекта</p>
+      <button class="form-submit" onclick="submitForm()">Оставить заявку →</button>
+      <p class="form-note" id="f-note">После оформления заявки с вами свяжется руководитель проекта</p>
     </div>
   </div>
 
 </div>
 </section>
 
+<script>
+async function submitForm() {
+  const name   = document.getElementById('f-name').value.trim();
+  const phone  = document.getElementById('f-phone').value.trim();
+  const tg     = document.getElementById('f-tg').value.trim();
+  const ticket = document.getElementById('f-ticket').value;
+  const qty    = document.getElementById('f-qty').value;
+  const note   = document.getElementById('f-note');
+  const btn    = document.querySelector('.form-submit');
+
+  if (!name || !phone || !ticket) {
+    note.textContent = '⚠️ Заполните имя, телефон и тип билета';
+    note.style.color = '#e05';
+    return;
+  }
+
+  const text = `🎟 Новая заявка — WEB3 AI VILLAGE\n\n👤 Имя: ${name}\n📞 Телефон: ${phone}\n💬 Telegram: ${tg || '—'}\n🎫 Билет: ${ticket}\n🔢 Количество: ${qty}`;
+
+  btn.disabled = true;
+  btn.textContent = 'Отправляем...';
+
+  try {
+    const res = await fetch(`https://api.telegram.org/bot8216982961:AAGThm2UjDMBqX4S2BtzBOhEPh23X4pAfAk/sendMessage`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ chat_id: '-5276790007', text, parse_mode: 'HTML' })
+    });
+    const data = await res.json();
+    if (data.ok) {
+      btn.textContent = '✅ Заявка отправлена!';
+      btn.style.background = '#6A8C2A';
+      note.textContent = 'Спасибо! Руководитель проекта свяжется с вами в ближайшее время.';
+      note.style.color = '#6A8C2A';
+      document.getElementById('f-name').value = '';
+      document.getElementById('f-phone').value = '';
+      document.getElementById('f-tg').value = '';
+      document.getElementById('f-ticket').value = '';
+    } else {
+      throw new Error(data.description);
+    }
+  } catch(e) {
+    btn.disabled = false;
+    btn.textContent = 'Оставить заявку →';
+    note.textContent = '❌ Ошибка отправки. Попробуйте ещё раз.';
+    note.style.color = '#e05';
+  }
+}
+</script>
+
 <!-- ══════════════════════════
      INFO PARTNERS
 ══════════════════════════ -->
-<section class="section section--dark">
+<section class="section sec-light">
 <div class="container">
   <span class="s-label">Медиаподдержка</span>
   <h2 class="s-title">Инфопартнёры</h2>
@@ -2485,47 +2715,31 @@ body {
 <!-- ══════════════════════════
      FAQ
 ══════════════════════════ -->
-<section class="section" id="faq">
+<section class="section sec-dark" id="faq">
 <div class="container">
   <span class="s-label">FAQ</span>
   <h2 class="s-title">Частые вопросы</h2>
 
   <div class="faq-list" style="max-width: 800px;">
     <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Где проходит событие?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Комарово Village — закрытая загородная площадка в 4 км от Минска. Точный адрес и схема проезда придут после регистрации.</div></div>
+      <button class="faq-q" onclick="faqToggle(this)">Что если я не успею на трансфер?<div class="faq-icon">+</div></button>
+      <div class="faq-body"><div class="faq-body-inner">Трансфер отходит в 2 этапа: 9:45 и 10:30 от ст.м. Слуцкий Гостинец (точный адрес придёт в письме). Опоздали? Пришлём координаты, можно добраться на такси (15 мин от МКАД).</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Как добраться? Входит ли трансфер?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Да, организованный трансфер из Минска включён в оба типа билета. Место отправления и время вы получите после оплаты. Можно добраться и самостоятельно — парковка на месте есть.</div></div>
+      <button class="faq-q" onclick="faqToggle(this)">Будет ли запись выступлений?<div class="faq-icon">+</div></button>
+      <div class="faq-body"><div class="faq-body-inner">Да, но только для владельцев билетов Business и VIP. Standard — только живое участие.</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Что входит в Standard?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Трансфер, вся основная программа 11:00–20:00 (5 тематических блоков, разборы проектов, нетворкинг), кофе-брейки и кейтеринг.</div></div>
+      <button class="faq-q" onclick="faqToggle(this)">Можно ли вернуть деньги?<div class="faq-icon">+</div></button>
+      <div class="faq-body"><div class="faq-body-inner">Да, полный возврат возможен за 3 дня до мероприятия для Стандарт, для Бизнес и VIP — за 7 дней. Менее 7 дней — перенос на другое мероприятие или замена участника.</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Что входит в VIP?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Всё из Standard + VIP afterparty с 22:00 до 03:00: шашлык-пати, кавер-бенд, неформальный нетворкинг, тесный контакт со спикерами и партнёрами в расслабленной обстановке.</div></div>
+      <button class="faq-q" onclick="faqToggle(this)">Что значит «разбор проекта»?<div class="faq-icon">+</div></button>
+      <div class="faq-body"><div class="faq-body-inner">Вы задаёте вопрос эксперту для своего бизнеса (или письменное описание задачи). Эксперты дают фидбек 5–7 минут. Только для Business/VIP в приоритете, в формате живого общения.</div></div>
     </div>
     <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Будет ли еда и кофе-брейки?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Да. Организованный кейтеринг и кофе-брейки включены в оба билета. На VIP afterparty — шашлык-пати.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Можно ли купить несколько билетов?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Да, при покупке указывайте нужное количество. Для корпоративных групп от 3+ человек — напишите нам напрямую, обсудим условия.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Можно ли подать проект на разбор?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Да. После регистрации вы получите форму заявки на питч. Количество слотов ограничено — 3 проекта. Заявки рассматриваются в порядке поступления.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Что происходит после оплаты?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">На ваш email придёт подтверждение с деталями события: адрес, время трансфера, программа дня и контакт организатора для вопросов.</div></div>
-    </div>
-    <div class="faq-item">
-      <button class="faq-q" onclick="faqToggle(this)">Можно ли вернуть билет?<div class="faq-icon">+</div></button>
-      <div class="faq-body"><div class="faq-body-inner">Возврат возможен до 25 апреля 2026 включительно. После этой даты — только обмен билета на другого участника. Напишите нам в Telegram для оформления.</div></div>
+      <button class="faq-q" onclick="faqToggle(this)">Что включено в кейтеринг?<div class="faq-icon">+</div></button>
+      <div class="faq-body"><div class="faq-body-inner">Различные закуски (салаты, напитки, около 450 г/чел) + кофе-брейки (кофе, чай, печенье).</div></div>
     </div>
   </div>
 
