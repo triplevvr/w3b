@@ -1235,8 +1235,8 @@ body {
 }
 
 .prog-avatar {
-  width: 52px;
-  height: 52px;
+  width: 68px;
+  height: 68px;
   border-radius: 50%;
   background: rgba(151,188,83,0.1);
   border: 1px solid rgba(151,188,83,0.3);
@@ -1348,8 +1348,8 @@ body {
   transform: translateY(-2px);
 }
 .headliner-photo {
-  width: 88px;
-  height: 88px;
+  width: 110px;
+  height: 110px;
   border-radius: 50%;
   background: rgba(151,188,83,0.12);
   border: 2px solid rgba(151,188,83,0.3);
@@ -1449,6 +1449,12 @@ body {
   background: #FFFFFF;
   border: 1px solid rgba(0,0,0,0.1);
   flex-shrink: 0;
+  display: block;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.partner-logo:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
 }
 .partner-logo img {
   width: 100%;
@@ -1504,8 +1510,8 @@ body {
   gap: 16px;
 }
 .topic-avatar {
-  width: 56px;
-  height: 56px;
+  width: 72px;
+  height: 72px;
   border-radius: 50%;
   background: rgba(151,188,83,0.12);
   border: 1px solid rgba(151,188,83,0.3);
@@ -1699,19 +1705,11 @@ body {
       <p>Не как хайп и «монетки ради монеток», а как реальные инструменты новой экономики — гибкость, переводы, расчёты, новые модели взаимодействия и понимание того, куда движется рынок.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar"><img src="khitrov1.png" alt="Сергей Хитров"></div>
-          <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Сергей Хитров</div>
-            <div class="topic-speaker-role">Основатель форума Blockchain Life</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
-          </div>
-        </div>
-        <div class="topic-speaker">
           <div class="topic-avatar"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
           <div class="topic-speaker-info">
             <div class="topic-speaker-name">Иван Жизневский</div>
             <div class="topic-speaker-role">НацБанк, зам. нач. ПВТ</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <a href="https://itnews.pro/articles/5273-pervyij-pretendent-na-status-pervogo-kriptobanka-belarusi-itnewspro-uznala-podrobnosti" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
       </div>
@@ -1722,11 +1720,11 @@ body {
       <p>Как ускорять процессы, снижать ручной труд, усиливать команды и внедрять AI с практической пользой — без переплаты и лишнего риска.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
+          <div class="topic-avatar"><img src="dranitsa.jpg" alt="Максим Драница"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Андрей Тепляков</div>
-            <div class="topic-speaker-role">W3B-Ai, PRO.UP</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <div class="topic-speaker-name">Максим Драница</div>
+            <div class="topic-speaker-role">Автоматизация бизнес-процессов с помощью AI</div>
+            <a href="https://www.instagram.com/m_dranitsa/" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
@@ -1734,7 +1732,7 @@ body {
           <div class="topic-speaker-info">
             <div class="topic-speaker-name">Татьяна Потолицына</div>
             <div class="topic-speaker-role">Внедрение AI-моделей</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <a href="https://www.linkedin.com/in/tatsiana-patalitsyna/" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
       </div>
@@ -1745,19 +1743,19 @@ body {
       <p>Что сегодня реально помогает бизнесу расти, усиливать продажи, маркетинг и управляемость в условиях нового рынка.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar">—</div>
+          <div class="topic-avatar"><img src="khitrov1.png" alt="Сергей Хитров" style="object-position: center 15%;"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Спикер 1</div>
-            <div class="topic-speaker-role">Будет объявлен</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <div class="topic-speaker-name">Сергей Хитров</div>
+            <div class="topic-speaker-role">Основатель форума Blockchain Life</div>
+            <a href="https://www.instagram.com/serkhitrov/" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
-          <div class="topic-avatar"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
+          <div class="topic-avatar"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Анна Алексеева</div>
-            <div class="topic-speaker-role">Основатель FinLab.by</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <div class="topic-speaker-name">Тамара Кулинкович</div>
+            <div class="topic-speaker-role">Основатель Skademy.by</div>
+            <a href="https://skademy.by/" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
       </div>
@@ -1768,19 +1766,19 @@ body {
       <p>Как работать с новыми цифровыми инструментами аккуратно, легально и без лишних рисков в белорусском контексте.</p>
       <div class="topic-speakers">
         <div class="topic-speaker">
-          <div class="topic-avatar"><img src="malinina.jpg" alt="Света Малинина"></div>
+          <div class="topic-avatar"><img src="malinina.jpg" alt="Света Малинина" style="object-position: center 20%;"></div>
           <div class="topic-speaker-info">
             <div class="topic-speaker-name">Света Малинина</div>
             <div class="topic-speaker-role">Налоги, финансы</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <a href="https://www.instagram.com/malinina.sveta/" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
         <div class="topic-speaker">
-          <div class="topic-avatar"><img src="dranitsa.jpg" alt="Максим Драница"></div>
+          <div class="topic-avatar"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
           <div class="topic-speaker-info">
-            <div class="topic-speaker-name">Максим Драница</div>
-            <div class="topic-speaker-role">Автоматизация бизнес-процессов с помощью AI</div>
-            <a href="#" class="topic-speaker-btn">Подробнее о спикере →</a>
+            <div class="topic-speaker-name">Анна Алексеева</div>
+            <div class="topic-speaker-role">Основатель FinLab.by</div>
+            <a href="https://finlab.by/about-us/" class="topic-speaker-btn" target="_blank">Подробнее о спикере →</a>
           </div>
         </div>
       </div>
@@ -2071,7 +2069,7 @@ body {
     <div class="headliners-label">Хедлайнеры</div>
     <div class="headliners">
     <div class="headliner-card">
-      <div class="headliner-photo"><img src="khitrov1.png" alt="Сергей Хитров"></div>
+      <div class="headliner-photo"><img src="khitrov1.png" alt="Сергей Хитров" style="object-position: center 15%;"></div>
       <div class="headliner-name">Сергей Хитров</div>
       <div class="headliner-role">Основатель форума Blockchain Life</div>
       <div class="headliner-desc">Один из ведущих организаторов крипто-конференций в СНГ, эксперт по Web3 и блокчейн-индустрии</div>
@@ -2125,7 +2123,7 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров"></div>
+            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров" style="object-position: center 15%;"></div>
             <div>
               <div class="prog-spk-name">Сергей Хитров</div>
               <div class="prog-spk-role">Основатель форума Blockchain Life</div>
@@ -2188,7 +2186,7 @@ body {
             </div>
           </div>
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров"></div>
+            <div class="prog-avatar"><img src="khitrov1.png" alt="Сергей Хитров" style="object-position: center 15%;"></div>
             <div>
               <div class="prog-spk-name">Сергей Хитров</div>
               <div class="prog-spk-role">Эксперт разборов</div>
@@ -2209,7 +2207,7 @@ body {
         </div>
         <div class="prog-speakers">
           <div class="prog-speaker">
-            <div class="prog-avatar"><img src="malinina.jpg" alt="Света Малинина"></div>
+            <div class="prog-avatar"><img src="malinina.jpg" alt="Света Малинина" style="object-position: center 20%;"></div>
             <div>
               <div class="prog-spk-name">Света Малинина</div>
               <div class="prog-spk-role">Налоги, финансы</div>
@@ -2460,17 +2458,22 @@ body {
   <h2 class="s-title">Инфопартнёры</h2>
 
   <div class="partners-grid">
-    <div class="partner-logo"><img src="partner-itonews2.jpg" alt="IToNews.pro"></div>
-    <div class="partner-logo"><img src="partner-altcoinbuy.jpg" alt="AltcoinBuy"></div>
-    <div class="partner-logo" style="background:#000"><img src="partner-finplay.jpg" alt="Партнёр"></div>
-    <div class="partner-logo"><img src="partner-itonews.jpg" alt="Партнёр"></div>
-    <div class="partner-logo" style="background:#000"><img src="partner-sharky.jpg" alt="Партнёр"></div>
-    <div class="partner-logo"><img src="partner-probiz.jpg" alt="Партнёр"></div>
-    <div class="partner-logo"><img src="partner-crypto.jpg" alt="Партнёр"></div>
-    <div class="partner-logo"><img src="partner-proapp.jpg" alt="Партнёр"></div>
-    <div class="partner-logo"><img src="partner-relax.jpg" alt="Партнёр"></div>
-    <div class="partner-logo" style="background:#000"><img src="partner-biznesmova.jpg" alt="Biznes.Mova"></div>
-    <div class="partner-logo" style="background:#5b0ea6"><img src="partner-sharky2.jpg" alt="Партнёр"></div>
+    <a href="https://www.instagram.com/itnews.pro?igsh=MTU1azZzMW1kdGh5Mw==" target="_blank" class="partner-logo"><img src="p-itonews.jpg" alt="IToNews.pro"></a>
+    <a href="https://www.instagram.com/altcoinmedia?igsh=MThscG80a2ptdGkwaw==" target="_blank" class="partner-logo"><img src="p-altcoin.jpg" alt="AltcoinBuy"></a>
+    <a href="https://t.me/investmentby123" target="_blank" class="partner-logo" style="background:#000"><img src="p-aisales.jpg" alt="Future.by"></a>
+    <a href="https://t.me/Business_talk_belarus" target="_blank" class="partner-logo"><img src="p-bybit.jpg" alt="CryptoHodl"></a>
+    <a href="https://t.me/itsalesmeetup" target="_blank" class="partner-logo" style="background:#000"><img src="IMG_0674.JPG" alt="IT Sales Meetup"></a>
+    <a href="https://t.me/kateintheweb" target="_blank" class="partner-logo"><img src="p-kateintheweb.jpg" alt="Kate in the Web"></a>
+    <a href="https://t.me/biznesmova" target="_blank" class="partner-logo"><img src="p-finplay.jpg" alt="InvestmentBY"></a>
+    <a href="https://t.me/+F-VlQ5DEWFA1MTA6" target="_blank" class="partner-logo"><img src="p-teplyakov2.jpg" alt="Kriptoromm"></a>
+    <a href="https://t.me/future_by" target="_blank" class="partner-logo"><img src="p-probiz.jpg" alt="Mr Satoshi"></a>
+    <a href="https://www.instagram.com/ownerdobiz/" target="_blank" class="partner-logo" style="background:#5b0ea6"><img src="p-purple-o.jpg" alt="Business Talk Belarus"></a>
+    <a href="https://www.instagram.com/business_sharks_family/" target="_blank" class="partner-logo" style="background:#5b0ea6"><img src="p-biznesmova.jpg" alt="Business Sharks"></a>
+    <a href="https://t.me/cryptohodlnew" target="_blank" class="partner-logo" style="background:#000"><img src="IMG_0673.JPG" alt="CryptoHodl"></a>
+    <a href="https://www.relax.by/" target="_blank" class="partner-logo"><img src="p-proapp.jpg" alt="OwnerDoBiz"></a>
+    <a href="https://t.me/biznesmova" target="_blank" class="partner-logo"><img src="p-relax.jpg" alt="Relax.by"></a>
+    <a href="https://t.me/mrsatoshik" target="_blank" class="partner-logo"><img src="photo_2025-06-01_02-21-47.jpg" alt="Mr Satoshi"></a>
+    <a href="https://bezkassira.by/" target="_blank" class="partner-logo"><img src="p-bezkassira.jpg" alt="BezKassira"></a>
   </div>
 
 </div>
