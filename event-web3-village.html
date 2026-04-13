@@ -7,6 +7,7 @@
 <meta name="description" content="Выездное деловое событие. Web3, AI, цифровая экономика, маркетинг, регуляторика. 2 мая 2026, Комарово Village, 4 км от Минска. 200+ участников, 8 экспертов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
 <style>
 
@@ -3039,7 +3040,7 @@ async function submitForm() {
   btn.textContent = 'Отправляем...';
 
   try {
-    const res = await fetch(`https://api.telegram.org/botsendMessage`, {
+    const res = await fetch(`https://api.telegram.org/bot/sendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ chat_id: '-5276790007', text, parse_mode: 'HTML' })
