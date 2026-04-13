@@ -7,7 +7,7 @@
 <meta name="description" content="Выездное деловое событие. Web3, AI, цифровая экономика, маркетинг, регуляторика. 2 мая 2026, Комарово Village, 4 км от Минска. 200+ участников, 8 экспертов.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
 <style>
 
 /* ══════════════════════════════════════
@@ -776,7 +776,7 @@ body {
   content: '';
   width: 6px;
   height: 6px;
-  border-radius: 50%;
+  border-radius: 16px;
   background: #97BC53;
   flex-shrink: 0;
 }
@@ -865,7 +865,7 @@ body {
 }
 .tl-dot {
   width: 44px; height: 44px; flex-shrink: 0;
-  border-radius: 50%;
+  border-radius: 16px;
   background: #FFFFFF;
   border: 1px solid rgba(0,0,0,0.12);
   display: flex; align-items: center; justify-content: center;
@@ -1209,6 +1209,11 @@ body {
   padding: 4px 14px;
   margin-bottom: 10px;
 }
+.org-badge--grey {
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.07);
+  border-color: rgba(255,255,255,0.15);
+}
 
 /* ══════════════════════
    FINAL CTA
@@ -1354,7 +1359,7 @@ body {
   align-items: center;
   justify-content: center;
   background: rgba(151,188,83,0.1);
-  border-radius: 50%;
+  border-radius: 16px;
   border: 1px solid rgba(151,188,83,0.25);
 }
 .prog-block.open .prog-arrow { transform: rotate(180deg); }
@@ -1386,7 +1391,7 @@ body {
 .prog-avatar {
   width: 68px;
   height: 68px;
-  border-radius: 50%;
+  border-radius: 14px;
   background: rgba(151,188,83,0.1);
   border: 1px solid rgba(151,188,83,0.3);
   display: flex;
@@ -1500,7 +1505,7 @@ body {
 .headliner-photo {
   width: 110px;
   height: 110px;
-  border-radius: 50%;
+  border-radius: 20px;
   background: rgba(151,188,83,0.08);
   border: 2px solid rgba(151,188,83,0.25);
   display: flex;
@@ -1672,7 +1677,7 @@ body {
 .topic-avatar {
   width: 72px;
   height: 72px;
-  border-radius: 50%;
+  border-radius: 16px;
   background: rgba(151,188,83,0.12);
   border: 1px solid rgba(151,188,83,0.3);
   display: flex;
@@ -1726,6 +1731,154 @@ body {
 .topic-speaker-btn:hover {
   color: #97BC53;
   border-
+}
+
+/* ══════════════════════════════
+   EXPERTS SINGLE ROW
+══════════════════════════════ */
+.experts-section {
+  margin: 40px 0 48px;
+}
+
+.experts-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end; /* выравнивание по низу — крупные "возвышаются" */
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.expert-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* TIER 1 — крупные */
+.expert-photo-t1 {
+  width: 120px;
+  height: 120px;
+  border-radius: 16px;
+  border: 2.5px solid rgba(151,188,83,0.6);
+  box-shadow: 0 0 0 5px rgba(151,188,83,0.12);
+  overflow: hidden;
+  margin-bottom: 12px;
+  flex-shrink: 0;
+  background: rgba(151,188,83,0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.expert-t1:hover .expert-photo-t1 {
+  border-color: #97BC53;
+  box-shadow: 0 0 0 5px rgba(151,188,83,0.22);
+}
+.expert-photo-t1 img { width: 100%; height: 100%; object-fit: cover; }
+
+.expert-name-t1 {
+  font-family: 'Inter', sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+/* TIER 2 — средние */
+.expert-photo-t2 {
+  width: 96px;
+  height: 96px;
+  border-radius: 16px;
+  border: 2px solid rgba(151,188,83,0.4);
+  box-shadow: 0 0 0 4px rgba(151,188,83,0.08);
+  overflow: hidden;
+  margin-bottom: 10px;
+  flex-shrink: 0;
+  background: rgba(151,188,83,0.08);
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.expert-t2:hover .expert-photo-t2 {
+  border-color: #97BC53;
+  box-shadow: 0 0 0 4px rgba(151,188,83,0.16);
+}
+.expert-photo-t2 img { width: 100%; height: 100%; object-fit: cover; }
+
+.expert-name-t2 {
+  font-family: 'Inter', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+/* TIER 3 — остальные */
+.expert-photo-t3 {
+  width: 76px;
+  height: 76px;
+  border-radius: 16px;
+  border: 2px solid rgba(255,255,255,0.12);
+  overflow: hidden;
+  margin-bottom: 9px;
+  flex-shrink: 0;
+  background: rgba(255,255,255,0.05);
+  transition: border-color 0.2s;
+}
+.expert-t3:hover .expert-photo-t3 {
+  border-color: rgba(151,188,83,0.4);
+}
+.expert-photo-t3 img { width: 100%; height: 100%; object-fit: cover; }
+
+.expert-name-t3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: -0.01em;
+  margin-bottom: 3px;
+}
+
+/* Общий role */
+.expert-role {
+  font-size: 11px;
+  color: rgba(255,255,255,0.4);
+  line-height: 1.4;
+  max-width: 110px;
+}
+.expert-t1 .expert-role { max-width: 130px; font-size: 12px; }
+.expert-t2 .expert-role { max-width: 120px; }
+
+.sec-cta {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+}
+
+.experts-note {
+  text-align: center;
+  font-size: 12px;
+  color: rgba(255,255,255,0.28);
+  font-style: italic;
+  margin-top: 20px;
+  letter-spacing: 0.02em;
+}
+
+@media (max-width: 768px) {
+  .experts-row { gap: 10px; }
+  .expert-photo-t1 { width: 86px; height: 86px; }
+  .expert-photo-t2 { width: 72px; height: 72px; }
+  .expert-photo-t3 { width: 60px; height: 60px; }
+  .expert-name-t1 { font-size: 13px; }
+  .expert-name-t2 { font-size: 12px; }
+  .expert-name-t3 { font-size: 11px; }
+  .expert-role { font-size: 10px; max-width: 80px !important; }
+}
+
+@media (max-width: 480px) {
+  .experts-row { gap: 8px; }
+  .expert-photo-t1 { width: 70px; height: 70px; }
+  .expert-photo-t2 { width: 60px; height: 60px; }
+  .expert-photo-t3 { width: 50px; height: 50px; }
+  .expert-role { display: none; }
 }
 
 .ev-page::after { display: none; }
@@ -1786,7 +1939,7 @@ body {
 .panel-avatar {
   width: 48px;
   height: 48px;
-  border-radius: 50%;
+  border-radius: 10px;
   overflow: hidden;
   border: 2px solid rgba(151,188,83,0.4);
   flex-shrink: 0;
@@ -1961,6 +2114,64 @@ section.ev-final { background: #1A1A1A; }
   <h2 class="s-title">4 темы · 8 экспертов</h2>
   <p class="s-sub">Не слайды ради слайдов. Каждая тема — живой диалог с залом.</p>
 
+  <!-- Эксперты мероприятия -->
+  <div class="experts-section">
+    <div class="headliners-label">Эксперты мероприятия</div>
+
+    <div class="experts-row">
+      <!-- Tier 3 -->
+      <div class="expert-card expert-t3">
+        <div class="expert-photo expert-photo-t3"><img src="potolitsyna.jpg" alt="Татьяна Потолицына"></div>
+        <div class="expert-name expert-name-t3">Татьяна Потолицына</div>
+        <div class="expert-role">Внедрение AI-моделей</div>
+      </div>
+      <!-- Tier 3 -->
+      <div class="expert-card expert-t3">
+        <div class="expert-photo expert-photo-t3"><img src="teplyakov.jpg" alt="Андрей Тепляков"></div>
+        <div class="expert-name expert-name-t3">Андрей Тепляков</div>
+        <div class="expert-role">W3B-Ai, PRO.UP</div>
+      </div>
+      <!-- Tier 2 -->
+      <div class="expert-card expert-t2">
+        <div class="expert-photo expert-photo-t2"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
+        <div class="expert-name expert-name-t2">Тамара Кулинкович</div>
+        <div class="expert-role">Основатель Skademy.by</div>
+      </div>
+      <!-- Tier 1 -->
+      <div class="expert-card expert-t1">
+        <div class="expert-photo expert-photo-t1"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
+        <div class="expert-name expert-name-t1">Иван Жизневский</div>
+        <div class="expert-role">НацБанк, зам. нач. ПВТ</div>
+      </div>
+      <!-- Tier 1 -->
+      <div class="expert-card expert-t1">
+        <div class="expert-photo expert-photo-t1"><img src="khitrov1.png" alt="Алексей Хитров" style="object-position: center 15%;"></div>
+        <div class="expert-name expert-name-t1">Алексей Хитров</div>
+        <div class="expert-role">Основатель форума Blockchain Life</div>
+      </div>
+      <!-- Tier 2 -->
+      <div class="expert-card expert-t2">
+        <div class="expert-photo expert-photo-t2"><img src="dranitsa.jpg" alt="Максим Драница"></div>
+        <div class="expert-name expert-name-t2">Максим Драница</div>
+        <div class="expert-role">Автоматизация бизнес-процессов с AI</div>
+      </div>
+      <!-- Tier 3 -->
+      <div class="expert-card expert-t3">
+        <div class="expert-photo expert-photo-t3"><img src="malinina.jpg" alt="Света Малинина" style="object-position: center 20%;"></div>
+        <div class="expert-name expert-name-t3">Света Малинина</div>
+        <div class="expert-role">Налоги, финансы</div>
+      </div>
+      <!-- Tier 3 -->
+      <div class="expert-card expert-t3">
+        <div class="expert-photo expert-photo-t3"><img src="alekseeva.jpg" alt="Анна Алексеева"></div>
+        <div class="expert-name expert-name-t3">Анна Алексеева</div>
+        <div class="expert-role">Основатель FinLab.by</div>
+      </div>
+    </div>
+
+    <p class="experts-note">Только практики с сильным бэкграундом и реальными кейсами</p>
+  </div>
+
   <div class="topics-grid">
     <div class="topic-card card">
       <div class="topic-num">ТЕМА 01 ——</div>
@@ -2062,6 +2273,10 @@ section.ev-final { background: #1A1A1A; }
       <h3><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" style="display:inline-block;vertical-align:middle;margin-right:8px;margin-bottom:2px"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3z"/><path d="M19 10v2a7 7 0 0 1-14 0v-2"/><line x1="12" y1="19" x2="12" y2="22"/><line x1="8" y1="22" x2="16" y2="22"/></svg> Разборы проектов</h3>
       <p>Живая обратная связь по идеям, продуктам, гипотезам и бизнес-задачам участников. 3 питча по 20 минут — честная обратная связь от экспертов и зала.</p>
     </div>
+  </div>
+
+  <div class="sec-cta">
+    <a href="#tickets" class="btn btn-primary">Оставить заявку →</a>
   </div>
 
 </div>
@@ -2177,6 +2392,10 @@ section.ev-final { background: #1A1A1A; }
     <div class="fw-not-item">Тем, кто боится слова «крипта» и не готов к изменениям</div>
   </div>
 
+  <div class="sec-cta">
+    <a href="#tickets" class="btn btn-primary">Оставить заявку →</a>
+  </div>
+
 </div>
 </section>
 
@@ -2246,6 +2465,10 @@ section.ev-final { background: #1A1A1A; }
   </div>
   <div class="why-note">
     Это событие не про «посидеть и послушать». Это про <strong>понять, спросить, разобрать</strong> и унести пользу с собой.
+  </div>
+
+  <div class="sec-cta">
+    <a href="#tickets" class="btn btn-primary">Оставить заявку →</a>
   </div>
 
 </div>
@@ -2320,6 +2543,10 @@ section.ev-final { background: #1A1A1A; }
 
   </div>
 
+  <div class="sec-cta">
+    <a href="#tickets" class="btn btn-primary">Оставить заявку →</a>
+  </div>
+
 </div>
 </section>
 
@@ -2332,37 +2559,6 @@ section.ev-final { background: #1A1A1A; }
 <div class="container">
   <span class="s-label">Программа дня</span>
   <h2 class="s-title">Как будет устроен день</h2>
-
-  <!-- Хедлайнеры -->
-  <div class="headliners-wrap">
-    <div class="headliners-label">Хедлайнеры</div>
-    <div class="headliners">
-    <div class="headliner-card">
-      <div class="headliner-photo"><img src="kulinkovich.jpg" alt="Тамара Кулинкович"></div>
-      <div class="headliner-name">Тамара Кулинкович</div>
-      <div class="headliner-role">Основатель Skademy.by</div>
-      <div class="headliner-desc">Предприниматель, эксперт по образованию и развитию бизнеса в цифровой среде</div>
-    </div>
-    <div class="headliner-card">
-      <div class="headliner-photo"><img src="zhiznevsky.jpg" alt="Иван Жизневский"></div>
-      <div class="headliner-name">Иван Жизневский</div>
-      <div class="headliner-role">НацБанк, зам. нач. ПВТ</div>
-      <div class="headliner-desc">Эксперт по регуляторике цифровой экономики и государственной политике в сфере финтех</div>
-    </div>
-    <div class="headliner-card">
-      <div class="headliner-photo"><img src="khitrov1.png" alt="Алексей Хитров" style="object-position: center 15%;"></div>
-      <div class="headliner-name">Алексей Хитров</div>
-      <div class="headliner-role">Основатель форума Blockchain Life</div>
-      <div class="headliner-desc">Один из ведущих организаторов крипто-конференций в СНГ, эксперт по Web3 и блокчейн-индустрии</div>
-    </div>
-    <div class="headliner-card">
-      <div class="headliner-photo"><img src="dranitsa.jpg" alt="Максим Драница"></div>
-      <div class="headliner-name">Максим Драница</div>
-      <div class="headliner-role">Автоматизация бизнес-процессов с AI</div>
-      <div class="headliner-desc">Эксперт по внедрению AI-решений в бизнес, практик автоматизации процессов</div>
-    </div>
-  </div><!-- /headliners -->
-  </div><!-- /headliners-wrap -->
 
   <div class="program-list">
 
@@ -2673,13 +2869,14 @@ section.ev-final { background: #1A1A1A; }
     <!-- W3B AI Community -->
     <div class="org-card">
       <div class="org-logo-big"><img src="Logo_W3B_Ai.png" alt="W3B•AI"></div>
+      <div class="org-badge org-badge--grey">Организатор</div>
       <div class="org-name">Web3 AI Community Беларусь</div>
       <div class="org-desc">Мы PRO бизнес, стратегии, развитие и инновации в цифровой экономике Беларуси.</div>
     </div>
 
     <!-- White Bird — ЦЕНТР, крупнее -->
     <div class="org-card org-card--main">
-      <div class="org-logo-big org-logo-main"><img src="6ebbf255-c081-43d9-a1e1-7b44a380ec7c.jpeg" alt="White Bird"></div>
+      <div class="org-logo-big org-logo-main" style="background:#FFFFFF;"><img src="6ebbf255-c081-43d9-a1e1-7b44a380ec7c.jpeg" alt="White Bird"></div>
       <div class="org-badge">Генеральный партнёр</div>
       <div class="org-name">WHITEBIRD</div>
       <div class="org-desc">Крупнейшая легальная криптоплатформа. Легально. Просто. Крипто.</div>
@@ -2688,6 +2885,7 @@ section.ev-final { background: #1A1A1A; }
     <!-- PRO.UP -->
     <div class="org-card">
       <div class="org-logo-big"><img src="IMG_0676.JPG" alt="PRO.UP"></div>
+      <div class="org-badge org-badge--grey">Организатор</div>
       <div class="org-name">PRO.UP / Marketing ProApp</div>
       <div class="org-desc">Объединяем маркетинг, продажи и сервис в единую систему прибыли.</div>
     </div>
@@ -2841,7 +3039,7 @@ async function submitForm() {
   btn.textContent = 'Отправляем...';
 
   try {
-    const res = await fetch(`https://api.telegram.org/bo/sendMessage`, {
+    const res = await fetch(`https://api.telegram.org/botsendMessage`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ chat_id: '-5276790007', text, parse_mode: 'HTML' })
