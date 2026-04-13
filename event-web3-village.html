@@ -1864,22 +1864,35 @@ body {
 }
 
 @media (max-width: 768px) {
-  .experts-row { gap: 10px; }
-  .expert-photo-t1 { width: 86px; height: 86px; }
-  .expert-photo-t2 { width: 72px; height: 72px; }
-  .expert-photo-t3 { width: 60px; height: 60px; }
-  .expert-name-t1 { font-size: 13px; }
-  .expert-name-t2 { font-size: 12px; }
-  .expert-name-t3 { font-size: 11px; }
-  .expert-role { font-size: 10px; max-width: 80px !important; }
+  .experts-row {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    justify-content: center;
+    gap: 20px 24px;
+  }
+  /* Порядок: Жизневский(1), Хитров(2), Кулинкович(3), Драница(4), остальные(5-8) */
+  .expert-t3:nth-child(1) { order: 5; } /* Потолицына */
+  .expert-t3:nth-child(2) { order: 6; } /* Тепляков */
+  .expert-t2:nth-child(3) { order: 3; } /* Кулинкович */
+  .expert-t1:nth-child(4) { order: 1; } /* Жизневский */
+  .expert-t1:nth-child(5) { order: 2; } /* Хитров */
+  .expert-t2:nth-child(6) { order: 4; } /* Драница */
+  .expert-t3:nth-child(7) { order: 7; } /* Малинина */
+  .expert-t3:nth-child(8) { order: 8; } /* Алексеева */
+
+  .expert-photo-t1 { width: 96px; height: 96px; }
+  .expert-photo-t2 { width: 86px; height: 86px; }
+  .expert-photo-t3 { width: 76px; height: 76px; }
+  .expert-name-t1 { font-size: 14px; }
+  .expert-name-t2 { font-size: 13px; }
+  .expert-name-t3 { font-size: 12px; }
+  .expert-role { font-size: 11px; max-width: 110px !important; }
 }
 
 @media (max-width: 480px) {
-  .experts-row { gap: 8px; }
-  .expert-photo-t1 { width: 70px; height: 70px; }
-  .expert-photo-t2 { width: 60px; height: 60px; }
-  .expert-photo-t3 { width: 50px; height: 50px; }
-  .expert-role { display: none; }
+  .expert-photo-t1 { width: 86px; height: 86px; }
+  .expert-photo-t2 { width: 76px; height: 76px; }
+  .expert-photo-t3 { width: 68px; height: 68px; }
 }
 
 .ev-page::after { display: none; }
